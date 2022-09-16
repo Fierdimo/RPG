@@ -32,7 +32,7 @@ function skills(_code){
 					{target: TARGET_EITHER,stat: STR, value:{magnitude: STATIC_VALUE, increase: 7}, type: PROFANE, time: {magnitude: STATIC_VALUE, increase: 0.1}, variant: SPELL},
 					{target: TARGET_EITHER,stat: STR, value:{magnitude: STATIC_VALUE, increase: 20}, type: PROFANE, time: {magnitude: STATIC_VALUE, increase: 0.1}, variant: SPELL},
 				],
-			name:"hex",
+			name:"hex-old",
 			description:[ "Segundo nivel de afinidad con la fuerza"],
 			code:3
 		},
