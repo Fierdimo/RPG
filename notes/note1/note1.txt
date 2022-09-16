@@ -1,0 +1,5 @@
+equipo para hacer dialogos
+		con cada dialogo nuevo aumenta experiencia
+		la capacidad de hablar con mas personas aumenta tu carisma, lenguaje y expresion
+		grandes repercisiones con el avance del item
+		<GRAN ORADOR> <AMIGO DEL PUEBLO> titulos obtenibles

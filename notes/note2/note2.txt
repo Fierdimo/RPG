@@ -1,0 +1,15 @@
+TODO::  >>>>>>>>>>> sprite_idex  <<<<<<<<<<<<
+
+SIstema de ataque
+--- 1. implementar equipos y estadisticas de ataque		
+		---------> implementar pausas por acciones
+				------------no se puede mover mientras ataca o castea	
+
+	--- 2. sistema de target 
+		----------> señal de seleccion	>>>> DONE
+		----------> señal <cuerpo a cuerpo> y <a distancia> ...
+				---------> rango de armas
+		----------> aliado vs enemigo
+				
+	--- 3. verificar CA/Salvacion
+	--- 4. ataques de area
