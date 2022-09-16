@@ -43,7 +43,7 @@ function skills(_code){
 				[
 					{target: TARGET_EITHER,stat: STR, value:{magnitude: STATIC_VALUE, increase: 1}, type: PROFANE, time: {magnitude: STATIC_VALUE, increase: 0.1}, variant: SPELL},
 				],
-			name:"Anti-hex",
+			name:"Anti-hex-old",
 			description:[ "Segundo nivel de afinidad con la fuerza"],
 			code:4
 		},
