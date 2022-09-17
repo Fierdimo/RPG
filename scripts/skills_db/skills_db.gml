@@ -2,7 +2,7 @@ function skills(_code){
 	
 	data = [
 		{
-			type: STANDARD,
+			cast_time: STANDARD,
 			effect:
 				[
 					//{stat: CHA, value:{magnitude: STATIC_VALUE, increase: 6}, type: ENHANCEMENT, time: {magnitude: STATIC_VALUE, increase: 10}},
@@ -14,7 +14,7 @@ function skills(_code){
 		},
 	
 		 {
-			type: SWIFT,
+			cast_time: SWIFT,
 			effect:
 				[
 					//{stat: CHA, value:{magnitude: STATIC_VALUE, increase: 8}, type: ENHANCEMENT, time: {magnitude: STATIC_VALUE, increase: 10}},
@@ -26,7 +26,7 @@ function skills(_code){
 		},
 	
 		 {
-			type: SWIFT,
+			cast_time: SWIFT,
 			effect:
 				[
 					{target: TARGET_EITHER,stat: STR, value:{magnitude: STATIC_VALUE, increase: 7}, type: PROFANE, time: {magnitude: STATIC_VALUE, increase: 0.1}, variant: SPELL},
@@ -38,7 +38,7 @@ function skills(_code){
 		},
 	
 		{
-			type: STANDARD,
+			cast_time: STANDARD,
 			effect:
 				[
 					{target: TARGET_EITHER,stat: STR, value:{magnitude: STATIC_VALUE, increase: 1}, type: PROFANE, time: {magnitude: STATIC_VALUE, increase: 0.1}, variant: SPELL},
@@ -49,7 +49,7 @@ function skills(_code){
 		},
 		
 		 {
-			type: SWIFT,
+			cast_time: SWIFT,
 			effect:
 				[
 					{target: TARGET_EITHER, stat: ACROBATICS, value:{magnitude: STATIC_VALUE, increase: 10}, type: ENHANCEMENT, time: {magnitude: STATIC_VALUE, increase: 10}, variant: SPELL},
@@ -60,7 +60,7 @@ function skills(_code){
 		},
 		
 		 {
-			type: STANDARD,
+			cast_time: STANDARD,
 			effect:
 				[
 					{target: TARGET_EITHER,stat: HIT_POINTS, value:{magnitude: STATIC_VALUE, increase: 10}, type:{attackTo: WILL, salv: true, damage: HALF, source: SACRED}, variant: SPELL},
@@ -71,31 +71,56 @@ function skills(_code){
 		},
 		
 		 {
-			type: STANDARD,
+			code:7,
+			data:{
+				name:"Harm",	
+				description:[ "Conjuro que quema con la fuerza del mal"],
+				icon: "imagen por montar",
+				range: CLOSE_RANGE,
+				type: DISTANCE_ATTACK,
+				school: "NIGROMANCE",
+				level:1,
+				salvation: WILL,
+				harmless: false,
+				success: HALF,
+				cast_time: STANDARD,
+				},
+			require_attack: true,
+			
 			effect:
 				[
-					{target: TARGET_EITHER, stat: HIT_POINTS, value:{magnitude: STATIC_VALUE, increase: -10}, type:{attackTo: WILL, salv: true, damage: HALF, source: PROFANE, range: DISTANCE, distance: 30}, variant: SPELL},
+					{target: DAMAGE, value:{magnitude: STATIC_VALUE, increase: 15}, type: PROFANE},
 				],
-			name:"Harm",	
-			description:[ "Segundo nivel de afinidad con la fuerza"],
-			code:7			
+						
 		},
 		{
-			type: SWIFT,
+			code:8,
+			data: {
+				name:"FALSE LIFE",
+				description:[ "Muerto pero vivo"],
+				icon: "imagen por montar",
+				range: CLOSE_RANGE,
+				type: DISTANCE_ATTACK,
+				school: "NIGROMANCE",
+				level:1,
+				salvation: WILL,
+				harmless: true,
+				success: HALF,
+				target: TARGET_POINTER,
+				cast_time: SWIFT,
+			},
+			
+			require_attack: false,
 			effect:
 				[
-					//{target: TARGET_EITHER, stat: HIT_POINTS, value:{magnitude: STATIC_VALUE, increase: 10}, type:{attackTo: WILL, salv: true, damage: HALF, source: PROFANE}, variant: SPELL},
-					{target: TARGET_EITHER, stat: HIT_POINTS, value:{magnitude: 5, increase: CHA, fixed: CHA}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: TEMP , variant: SPELL},
-				],
-			name:"FALSE LIFE",
-			description:[ "Muerto pero vivo"],
-			code:8			
+					{target: HIT_POINTS, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: TEMP},
+				],	
 		},
 		{
-			type: STANDARD,
+			cast_time: STANDARD,
 			effect:
 				[
-					{target: TARGET_EITHER, stat: HIT_POINTS, value:{magnitude: STATIC_VALUE, increase: -10}, type:{attackTo: ARMOR_CLASS, salv: false, damage: FULL, source: BLUDGEONING, range: MELEE, distance: 1.5}, variant: WEAPON},
+					{target: HIT_POINTS, value:{magnitude: STATIC_VALUE, increase: -10}, type: BLUDGEONING, variant: WEAPON},
 				],
 			name:"Swing",
 			description:[ "Ataca con toda la fuerza disponible"],

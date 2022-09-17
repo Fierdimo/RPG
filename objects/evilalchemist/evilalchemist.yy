@@ -6,7 +6,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "alchemist",
+    "path": "sprites/alchemist/alchemist.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player Options",
-    "path": "folders/Scripts/Player Options.yy",
+    "name": "Controls",
+    "path": "folders/Scripts/Controls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "damageHitPoints",
+  "name": "processSkillData",
   "tags": [],
   "resourceType": "GMScript",
 }

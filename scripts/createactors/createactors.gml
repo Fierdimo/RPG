@@ -3,6 +3,8 @@ function createActors(actor_list_db, actor_instance_array = []){
 		var newActor = instance_create_layer(actor_list_db[position]._X_, actor_list_db[position]._y_, "Instances", actor_list_db[position].object, {
 				myArrayPosition: position,
 				myBuffs:[],
+				myPendigBuffs: [],
+				pendingAction: {},
 				myGears: new Equip_gears(),
 				myBag: new Equip_gears(),
 				myName: actor_list_db[position].name,
@@ -18,6 +20,7 @@ function createActors(actor_list_db, actor_instance_array = []){
 			doubleClick = true;
 			clickTime = 0;
 			distance = 0;
+			
 		}
 	}
 	return actor_instance_array;

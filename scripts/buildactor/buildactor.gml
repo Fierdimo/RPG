@@ -11,7 +11,7 @@ if(object_index == oPlayer){
 gearsToBuff();
 					
 for(var i = 0; i < array_length(myBuffs); i++)
-	{my.stat(myBuffs[i].stat, extractByStat(myBuffs[i].value), myBuffs[i].type );}
+	{my.stat(myBuffs[i].target, extractByStat(myBuffs[i].value), myBuffs[i].type );}
 				
 walkSpeed = my.stat().walkSpeed;
 }

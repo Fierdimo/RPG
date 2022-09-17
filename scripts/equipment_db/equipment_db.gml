@@ -5,12 +5,12 @@ function equipment_db(_code){
 		description: "1er nivel",
 		experience_conditions:{value: 0},
 		effect: [
-			{ stat: "STR", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "ENHANCEMENT", variant: "EQUIPMENT"},
-			{ stat: "CON", value:{magnitude: "STATIC_VALUE", increase: 4}, type: "ENHANCEMENT", variant: "EQUIPMENT"},
-			{ stat: "HIT_POINTS", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "BASE", variant: "EQUIPMENT"},
-			{ stat: "HIT_POINTS", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "MARKED", variant: "EQUIPMENT"},
-			{ stat: "HIT_POINTS", value:{magnitude: 1, increase: "CON"}, type: "BASE", variant: "EQUIPMENT"},
-			{ stat: "HIT_POINTS", value:{magnitude: 1, increase: "CON"}, type: "MARKED", variant: "EQUIPMENT"},
+			{ target: "STR", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "ENHANCEMENT", variant: "EQUIPMENT"},
+			{ target: "CON", value:{magnitude: "STATIC_VALUE", increase: 4}, type: "ENHANCEMENT", variant: "EQUIPMENT"},
+			{ target: "HIT_POINTS", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "BASE", variant: "EQUIPMENT"},
+			{ target: "HIT_POINTS", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "MARKED", variant: "EQUIPMENT"},
+			{ target: "HIT_POINTS", value:{magnitude: 1, increase: "CON"}, type: "BASE", variant: "EQUIPMENT"},
+			{ target: "HIT_POINTS", value:{magnitude: 1, increase: "CON"}, type: "MARKED", variant: "EQUIPMENT"},
 			{variant: "ACTION_KEY", skillCode: 7}
 		]},
 		
@@ -20,12 +20,12 @@ function equipment_db(_code){
 		description: "2do nivel",
 		experience_conditions:{},
 		effect: [
-			{ stat: "DAMAGE_REDUCTION", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "PROFANE", variant: "EQUIPMENT"},
-			{ stat: "CON", value:{magnitude: "STATIC_VALUE", increase: 6}, type: "ENHANCEMENT", variant: "EQUIPMENT"},
-			{ stat: "HIT_POINTS", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "BASE", variant: "EQUIPMENT"},
-			{ stat: "HIT_POINTS", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "MARKED", variant: "EQUIPMENT"},
-			{ stat: "HIT_POINTS", value:{magnitude: 1, increase: "CHA"}, type: "BASE", variant: "EQUIPMENT"},
-			{ stat: "HIT_POINTS", value:{magnitude: 1, increase: "CHA"}, type: "MARKED", variant: "EQUIPMENT"},
+			{ target: "DAMAGE_REDUCTION", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "PROFANE", variant: "EQUIPMENT"},
+			{ target: "CON", value:{magnitude: "STATIC_VALUE", increase: 6}, type: "ENHANCEMENT", variant: "EQUIPMENT"},
+			{ target: "HIT_POINTS", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "BASE", variant: "EQUIPMENT"},
+			{ target: "HIT_POINTS", value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "MARKED", variant: "EQUIPMENT"},
+			{ target: "HIT_POINTS", value:{magnitude: 1, increase: "CHA"}, type: "BASE", variant: "EQUIPMENT"},
+			{ target: "HIT_POINTS", value:{magnitude: 1, increase: "CHA"}, type: "MARKED", variant: "EQUIPMENT"},
 			{variant: "ACTION_KEY", skillCode: 7}
 		]},
 		{

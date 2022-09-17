@@ -1,0 +1,35 @@
+TODO::  >>>>>>>>>>> sprite_idex  <<<<<<<<<<<<
+
+SIstema de ataque
+
+	--- 2. sistema de target 
+		----------> señal de seleccion	>>>> DONE
+		---------->implementar equipos y estadisticas de ataque	
+		----------> señal <cuerpo a cuerpo> y <a distancia> ...
+				---------> rango de armas
+		----------> aliado vs enemigo
+		
+					
+				
+		---------> implementar pausas por acciones
+				------------no se puede mover mientras ataca o castea	
+
+	--- 3. verificar CA/Salvacion
+	--- 4. ataques de area
+	
+	
+	=====================================================
+	draw triangle
+	
+		var X,Y,T,M,A;
+		X = mainPlayer.x;//Center x
+		Y = mainPlayer.y;//Center y
+		T = 20;            //Thickness in degrees
+		M = 200;      //Max length
+		A = -(point_direction(X, Y, mouse_x, mouse_y)); //Angle
+		show_debug_message(A)
+		gpu_set_blendmode(bm_add);
+		draw_set_alpha(0.5+random(0.1));
+		draw_triangle(X, Y, (X+M*dcos(A-T/2)), (Y+M*dsin(A-T/2)), X+M*dcos(A+T/2), Y+M*dsin(A+T/2), false);
+		draw_set_alpha(5);
+		gpu_set_blendmode(bm_normal);
