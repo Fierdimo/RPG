@@ -1,4 +1,4 @@
-if(oGame.status == "CASTING"){
+if(status == "CASTING"){
 		local_frame = Animate();
 }
 else{

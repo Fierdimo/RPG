@@ -7,6 +7,6 @@ if (search_origin){
 doubleClick = checkDoubleClick(doubleClick)
 if(doubleClick){
 	doubleClick = false;
-	if (status == "WAIT" or status == "CASTING + WAIT")
-	status = "EXECUTE"
+	if (mainPlayer.status == "WAIT" or mainPlayer.status == "CASTING + WAIT")
+	mainPlayer.status = "EXECUTE"
 }

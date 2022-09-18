@@ -20,7 +20,7 @@ function createActors(actor_list_db, actor_instance_array = []){
 			doubleClick = true;
 			clickTime = 0;
 			distance = 0;
-			
+			status = "";			
 		}
 	}
 	return actor_instance_array;

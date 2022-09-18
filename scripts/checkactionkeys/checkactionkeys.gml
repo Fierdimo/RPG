@@ -20,7 +20,7 @@ function CheckActionKeys() constructor{
 				var myBuffos = _skill.effect
 				//interrupt if is casting standar or move actions
 					if((_skill.data.cast_time == STANDARD || _skill.data.cast_time == MOVE) && status == "CASTING"){
-						show_debug_message("ERROR: can't cast mean casting standard or move action")
+						show_debug_message("ERROR: can't cast while casting standard or move action")
 						return  {pushed: false};
 					}
 				//========================================

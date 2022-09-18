@@ -12,8 +12,9 @@ while(indx < array_length(Actors)){
 			shader_set(Shader1);
 			shader_set_uniform_f(uni_sAdd, sAdd);
 			}
-			draw_self();
-			shader_reset();
+		draw_self();
+		shader_reset();
+		draw_text(x,y,status);
 		}
 	indx++;
 }

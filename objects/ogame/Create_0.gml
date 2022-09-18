@@ -16,22 +16,26 @@
 	Actors = createActors(actor_list());
 	mainPlayer = Actors[0];			
 	target = mainPlayer.myArrayPosition;
-	targetDistance = 0;
-	touch = false;
-	TRIANGLE = false;
 	doubleClick = false;
+	
+	//=== DRAWING EFFECTS VARIABLES ===
 	clickTime = current_time;
 	search_origin = false;
-	found_origin = false;
-	status = "";
-	cursor = cr_cross;
-	origin_x = mouse_x;//Center x
-	origin_y = mouse_y;//Center y
-	maxDistance=0;
+	found_origin = false;	
+	cursor = cr_default;
+	origin_x = mouse_x;
+	origin_y = mouse_y;
+	
 	angle = 0
+	
+	// test 
 	origin_in_main_player = false;
 	attack_from_front= false;
+	maxDistance=0;
+	TRIANGLE = false;
 	
+	status = "";
+	touch = false;
 	
 	show_debug_overlay(true);
 	
