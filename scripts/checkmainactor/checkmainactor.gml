@@ -1,20 +1,30 @@
-function checkMainActor(actor){
+function checkMainActor(actor){	
+	show_debug_message(status)
 	
-	var action;
-	
-	with(mainPlayer){ action = actionKeys.scan();}
+
+	with(mainPlayer){var action = actionKeys.scan(oGame.status);}
 		
 		if(action.pushed){	
 			mainPlayer.pendingAction = action
 			if(action.require_attack){
-				status = "WAIT";
+				if (status == "CASTING"){
+					status = "CASTING + WAIT";
+					show_debug_message(status)
+				}
+				else
+					status = "WAIT";
 				//origin_in_main_player= true;
 				attack_from_front= true;
 				}
-			else status = "EXECUTE";
+			else {
+				if status == "CASTING"
+					status = "CASTING + EXECUTE"
+				else
+					status = "EXECUTE";
+			}
 		}
 		
-		if (status == "WAIT"){			
+		if (status == "WAIT" || status == "CASTING + WAIT"){			
 			search_origin = true;	
 			window_set_cursor(cursor);
 			
@@ -44,7 +54,6 @@ function checkMainActor(actor){
 				angle = (point_direction(origin_x, origin_y, mouse_x, mouse_y)/2)-22.5;
 				
 				if(attack_from_front) angle = ((mainPlayer.direction * 90)/2)-22.5;
-				show_debug_message(angle)
 				//==========================
 				
 				var count_actors = []
@@ -56,31 +65,34 @@ function checkMainActor(actor){
 							}
 						}
 				}
-				show_debug_message(count_actors)
 			}			
 		}
-		
-		if (status == "EXECUTE") {
-			
+
+		if (status == "EXECUTE" || status == "CASTING + EXECUTE") {
+			show_debug_message(status)
 			window_set_cursor(cr_default)
 			TRIANGLE = false;
-			status = "";
 			found_origin = false;
 			search_origin = false;
-			origin_in_main_player = false
+			origin_in_main_player = false;
+			if (status == "EXECUTE") status = ""
+			else status = "CASTING"
 			
-			
+			var cast_time = 0;
 			with(mainPlayer){
 				var not_pass = false;
+				
 				switch (pendingAction.data.cast_time){
 						case STANDARD:
 							if(global.timerStandardAction <= 0) {
 								with(oGame.mainPlayer) global.timerStandardAction = max(0, MAX_CAST_TIME - my.stat().standardActionSpeed);
+								other.cast_time = global.timerStandardAction;
 							} else not_pass = true;
 							break;
 						case MOVE:
 							if(global.timerMoveAction <= 0){
 								with(oGame.mainPlayer) global.timerMoveAction = max(0, (MAX_CAST_TIME-my.stat().moveActionSpeed)/2);
+								other.cast_time = global.timerMoveAction;
 							} else not_pass = true;
 							break;
 						case SWIFT:
@@ -94,38 +106,65 @@ function checkMainActor(actor){
 							} else not_pass = true;
 							break;
 						default:
-							show_debug_message("! WARNING -- No action -- !");
+							show_debug_message("! WARNING -- No action type-- !");
 							not_pass = true;
 							return;
 					}				
-				if (not_pass){
+				if (not_pass){					
 					myPendigBuffs = [];
 					return;
-				}
-				show_debug_message(pendingAction.data.cast_time)
-				show_debug_message("run script");
-				show_debug_message(pendingAction.pending)
-			}
+				}	
+			}			
+			
+				if status == "CASTING"
+						status = "CASTING + RUN"
+				else status = "RUN";
+				show_debug_message("accept script...")
 		}
 		
-		/*	if(action.pushed){	
-			return;
+		//script execution
+	var runScript = function(script_){
+				show_debug_message("run script:");
+				show_debug_message(script_.data.cast_time)
+				show_debug_message(script_.pending)
+				if (script_.data.cast_time == STANDARD || script_.data.cast_time == MOVE) status = "";
+				show_debug_message(status)
+		}
+		
+		if (status = "RUN" || status == "CASTING + RUN"){
 			
-			var skill_ = processSkillData(action.data)
-			if !skill_.approved return;
+				if status == "CASTING + RUN"
+					status = "CASTING";
+				else{
+					if (mainPlayer.pendingAction.data.cast_time == STANDARD || mainPlayer.pendingAction.data.cast_time == MOVE) status = "CASTING";
+					else status = ""
+				}
+				
+				show_debug_message("Casting...")
+				with(mainPlayer) var timer = time_source_create(time_source_game, other.cast_time, time_source_units_seconds, runScript, [pendingAction]);
+				time_source_start(timer);
 			
-			with(skill_.target) checkTmp(); //Delete redundant temporal hitpoints
+		}
+		
+		
+	//		if(action.pushed){	
+	//		return;
 			
-			if(action.require_attack) 
-				if successfulAttack(action.data)
-					 if !changeHitPoints(action.data.dmg_factor) return;
+	//		var skill_ = processSkillData(action.data)
+	//		if !skill_.approved return;
 			
-	//=============================================================================	
-			with(skill_.target){
-				my = create_player(db);
-				reBuffActor();
-			}
-		}*/
+	//		with(skill_.target) checkTmp(); //Delete redundant temporal hitpoints
+			
+	//		if(action.require_attack) 
+	//			if successfulAttack(action.data)
+	//				 if !changeHitPoints(action.data.dmg_factor) return;
+			
+	////=============================================================================	
+	//		with(skill_.target){
+	//			my = create_player(db);
+	//			reBuffActor();
+	//		}
+	//	}
 		//with ALL ??
 		with(mainPlayer) finishOldBuffs();
 	

@@ -1,7 +1,4 @@
-if(global.paused_game){
-			x=735;
-			y= 65;
-			direction = 3;
+if(oGame.status == "CASTING"){
 		local_frame = Animate();
 }
 else{

@@ -1,3 +1,0 @@
-function drawArea(form){
-
-}

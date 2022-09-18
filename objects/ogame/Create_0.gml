@@ -31,6 +31,8 @@
 	angle = 0
 	origin_in_main_player = false;
 	attack_from_front= false;
+	
+	
 	show_debug_overlay(true);
 	
 	

@@ -1,7 +1,7 @@
 draw_set_halign(fa_left)
 draw_set_font(GUI);
 
-draw_text(10,287, Actors[target].myName+" >> " + string(Actors[target].distance)+" mts")
+draw_text(10,287, Actors[target].myName+"("+oGame.status+") >> " + string(Actors[target].distance)+" mts")
 with(Actors[0]){	
 	draw_healthbar(10,40,200,50,myRelativeHP, c_yellow, c_teal, c_green,0,true,true);
 	draw_text(30,47, string(myHP))

@@ -20,7 +20,6 @@
     {"id":{"name":"GUI","path":"fonts/GUI/GUI.yy",},"order":1,},
     {"id":{"name":"player","path":"sprites/player/player.yy",},"order":0,},
     {"id":{"name":"refreshTimers","path":"scripts/refreshTimers/refreshTimers.yy",},"order":2,},
-    {"id":{"name":"drawArea","path":"scripts/drawArea/drawArea.yy",},"order":12,},
     {"id":{"name":"convertToStatic","path":"scripts/convertToStatic/convertToStatic.yy",},"order":5,},
     {"id":{"name":"create_player","path":"scripts/create_player/create_player.yy",},"order":3,},
     {"id":{"name":"Shader1","path":"shaders/Shader1/Shader1.yy",},"order":0,},
