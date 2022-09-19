@@ -19,23 +19,23 @@
 	doubleClick = false;
 	
 	//=== DRAWING EFFECTS VARIABLES ===
-	clickTime = current_time;
-	search_origin = false;
-	found_origin = false;	
-	cursor = cr_default;
-	origin_x = mouse_x;
-	origin_y = mouse_y;
+	global.clickTime = current_time;
+	global.search_origin = false;
+	global.found_origin = false;	
+	global.cursor = cr_default;
+	global.origin_x = 0;
+	global.origin_y = 0;	 
+	global.angle = 0;
+	global.area_spread = 0;
+	global.shape = SHAPE.none;
+	global.in_range = true;
 	
-	angle = 0
 	
 	// test 
-	origin_in_main_player = false;
-	attack_from_front= false;
-	maxDistance=0;
-	TRIANGLE = false;
+	global.origin_in_main_player = false;
+	global.attack_from_front= false;
 	
-	status = "";
-	touch = false;
+
 	
 	show_debug_overlay(true);
 	

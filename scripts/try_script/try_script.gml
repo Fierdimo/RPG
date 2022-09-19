@@ -1,13 +1,16 @@
-function try_script(){
+function try_script(targets){
+
 	var cast_time = 0;
 	
 	if (status == "EXECUTE" || status == "CASTING + EXECUTE") {	
+			show_debug_message(targets)
+		
 		with(other){ // clear variables				
-			TRIANGLE = false;
-			found_origin = false;
-			search_origin = false;
-			origin_in_main_player = false;
-			cursor = cr_default;
+			global.shape = SHAPE.none
+			global.found_origin = false;
+			global.search_origin = false;
+			global.origin_in_main_player = false;
+			global.cursor = cr_default;
 		}
 		
 		var not_pass = false;
@@ -19,7 +22,7 @@ function try_script(){
 			case STANDARD:
 				if(global.timerStandardAction <= 0) {
 						global.timerStandardAction = max(0, MAX_CAST_TIME - my.stat().standardActionSpeed);
-					cast_time = global.timerStandardAction;
+					cast_time = global.timerStandardAction/2;
 				} else not_pass = true;
 				break;
 			case MOVE:

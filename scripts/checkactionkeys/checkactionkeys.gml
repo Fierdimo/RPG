@@ -1,7 +1,6 @@
 function CheckActionKeys() constructor{
 	
 	actions= [];
-	wait_delay = MAX_CAST_TIME;
 	
 	function add(key, skill){
 		array_push(actions, {key: string_upper(key), skill: skill})

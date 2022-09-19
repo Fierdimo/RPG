@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Controls",
-    "path": "folders/Scripts/Controls.yy",
+    "name": "checkActions",
+    "path": "folders/Scripts/checkActions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CheckActionKeys",
+  "name": "checkactionkeys",
   "tags": [],
   "resourceType": "GMScript",
 }

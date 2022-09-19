@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "General",
-    "path": "folders/Scripts/General.yy",
+    "name": "GENERAL",
+    "path": "folders/Scripts/GENERAL.yy",
   },
   "resourceVersion": "1.0",
   "name": "replacePlayerOptions",

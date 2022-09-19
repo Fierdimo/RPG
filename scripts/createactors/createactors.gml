@@ -18,9 +18,8 @@ function createActors(actor_list_db, actor_instance_array = []){
 			buildActor();
 			buffTimer= get_timer();
 			doubleClick = true;
-			clickTime = 0;
 			distance = 0;
-			status = "";			
+			status = "";
 		}
 	}
 	return actor_instance_array;

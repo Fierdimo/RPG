@@ -1,26 +1,18 @@
 function checkMainActor(actor){		
 	
-	window_set_cursor(cursor);
+	window_set_cursor(global.cursor);
 
 	with(mainPlayer){		
 		var action = actionKeys.scan(status); //catch key action 
 		pendingAction = if_action_pushed(action);
-		wait_for_target(); // if <status> is WAIT
-		var cast_time = try_script()
+		
+		var cast_time = try_script(wait_for_target())
 		decode_script(execute, cast_time);
 		
 		finishOldBuffs();
-	}//============= END WITH ==========================
+	}
 		
 
-		
-
-
-
-		
-		
-	//		if(action.pushed){	
-	//		return;
 			
 	//		var skill_ = processSkillData(action.data)
 	//		if !skill_.approved return;

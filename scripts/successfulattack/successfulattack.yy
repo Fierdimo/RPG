@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Controls",
-    "path": "folders/Scripts/Controls.yy",
+    "name": "non actives",
+    "path": "folders/Scripts/checkActions/non actives.yy",
   },
   "resourceVersion": "1.0",
   "name": "successfulattack",

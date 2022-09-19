@@ -1,5 +1,6 @@
 draw_set_halign(fa_left)
 draw_set_font(GUI);
+draw_set_color(c_white);
 
 draw_text(10,287, Actors[target].myName+"("+Actors[target].status+") >> " + string(Actors[target].distance)+" mts")
 with(Actors[0]){	

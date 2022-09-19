@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "non actives",
-    "path": "folders/Scripts/checkActions/non actives.yy",
+    "name": "GENERAL",
+    "path": "folders/Scripts/GENERAL.yy",
   },
   "resourceVersion": "1.0",
-  "name": "changehitpoints",
+  "name": "ENUMS",
   "tags": [],
   "resourceType": "GMScript",
 }

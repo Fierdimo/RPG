@@ -1,6 +1,7 @@
 draw_set_font(small);
 draw_set_valign(fa_center)
 draw_set_halign(fa_center)
+draw_set_color(c_white);
 var indx = 0;
 while(indx < array_length(Actors)){
 	with(Actors[indx]){
@@ -18,21 +19,24 @@ while(indx < array_length(Actors)){
 		}
 	indx++;
 }
+//===================================================== AREA DRAWS =========================================================
+if (global.in_range) var colour = c_aqua;
+else var colour = c_red;
 
-if TRIANGLE {
+draw_set_color(colour);
+if (global.shape = SHAPE.CONE) {
 	gpu_set_blendmode(bm_add);
 
 		draw_primitive_begin(pr_trianglefan);
-		draw_vertex_colour(origin_x, origin_y, c_black, 0.1);
-		for(var i = angle; i <= 45+angle; ++i;)
+		draw_vertex_colour(global.origin_x, global.origin_y, c_black, 0.1);
+		for(var i = global.angle; i <= 45+global.angle; ++i;)
 		{
-		    draw_vertex_colour(origin_x + lengthdir_x(maxDistance, 90 * i / 45), origin_y + lengthdir_y(maxDistance, 90 * i / 45), c_aqua, 0.2);
-			//draw_line(origin_x, origin_y, origin_x + lengthdir_x(maxDistance, 90 * i / 45), origin_y + lengthdir_y(maxDistance, 90 * i / 45))
+		    draw_vertex_colour(global.origin_x + lengthdir_x(global.area_spread, 90 * i / 45), global.origin_y + lengthdir_y(global.area_spread, 90 * i / 45), colour, 0.2);
 		}
 		draw_primitive_end();
 	gpu_set_blendmode(bm_normal);
 }
-if(search_origin){
+if(global.search_origin){
 	draw_circle(mouse_x, mouse_y, global.pulse * 10, true);
 }
 
