@@ -2,7 +2,8 @@ enum SHAPE{
 	none = 0,
 	CONE = 1,
 	BURST = 2,
-	LINE = 3
+	LINE = 3,
+	SQUARE = 4
 }
 enum RANGE{	
 	 MELEE = -2,
@@ -15,10 +16,10 @@ enum RANGE{
 	 UNLIMITED = 6	
 }
 enum ORIGIN{
-	SELF = 0,
-	FRONT = 1,
-	BACK = 2,
-	LEFT = 3,
-	RIGTH = 4,
-	TARGET = 5	
+	TARGET = -2,	
+	SELF = -1,
+	FRONT = 0,
+	LEFT =45,
+	BACK = 90,
+	RIGHT = 135,	
 }

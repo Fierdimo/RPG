@@ -1,14 +1,16 @@
 function checkMainActor(actor){		
 	
-	window_set_cursor(global.cursor);
+	
 
-	with(mainPlayer){		
-		var action = actionKeys.scan(status); //catch key action 
-		pendingAction = if_action_pushed(action);
+	with(mainPlayer){
 		
-		var cast_time = try_script(wait_for_target())
-		decode_script(execute, cast_time);
+		pendingAction = if_action_pushed(actionKeys.scan(status));
 		
+		wait_for_target();
+		
+		decode_script(execute, try_script());
+		
+		//TODO: generate Attack of opportunity when casting
 		finishOldBuffs();
 	}
 		

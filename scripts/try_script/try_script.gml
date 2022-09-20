@@ -1,17 +1,15 @@
-function try_script(targets){
+function try_script(){
 
 	var cast_time = 0;
 	
-	if (status == "EXECUTE" || status == "CASTING + EXECUTE") {	
-			show_debug_message(targets)
+	if (status == "EXECUTE" || status == "CASTING + EXECUTE") {
 		
-		with(other){ // clear variables				
-			global.shape = SHAPE.none
+		 // clear global variables				
 			global.found_origin = false;
 			global.search_origin = false;
 			global.origin_in_main_player = false;
 			global.cursor = cr_default;
-		}
+
 		
 		var not_pass = false;
 		
@@ -49,6 +47,7 @@ function try_script(targets){
 				
 		if (not_pass){					
 			myPendigBuffs = [];
+			global.shape = SHAPE.none
 			return;
 		}			
 			

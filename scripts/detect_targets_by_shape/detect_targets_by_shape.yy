@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "General",
-    "path": "folders/Scripts/Player Options/General.yy",
+    "name": "checkActions",
+    "path": "folders/Scripts/checkActions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "create_player",
+  "name": "detect_targets_by_shape",
   "tags": [],
   "resourceType": "GMScript",
 }
