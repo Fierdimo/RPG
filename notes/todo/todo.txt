@@ -1,21 +1,22 @@
-TODO::  >>>>>>>>>>> sprite_idex  <<<<<<<<<<<<
+TODO::  >>>>>>>>>>> sprite_index  <<<<<<<<<<<<
 
 SIstema de ataque
 
 	--- 2. sistema de target 
-		----------> señal de seleccion	>>>> DONE
-		---------->implementar equipos y estadisticas de ataque	
-		----------> señal <cuerpo a cuerpo> y <a distancia> ...
+		---------->implementar equipos y estadisticas de ataque DOING		
+		----------> señal de seleccion	>>>>			
+		----------> señal <cuerpo a cuerpo> y <a distancia> 
 				---------> rango de armas
 		----------> aliado vs enemigo
 		
 					
 				
 		---------> implementar pausas por acciones
-				------------no se puede mover mientras ataca o castea	
+				------------no se puede mover mientras ataca[PENDING] o castea[DONE]
 
 	--- 3. verificar CA/Salvacion
 	--- 4. ataques de area
+	----------> Seleccion de areas [Burst, Square, Line, Cone] DONE
 	
 	
 	=====================================================

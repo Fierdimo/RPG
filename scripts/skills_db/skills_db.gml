@@ -13,16 +13,16 @@ function skills(_code){
 				origin: ORIGIN.FRONT,
 				school: "NIGROMANCE",
 				level:1,
-				salvation: WILL,
+				salvation: actor_salvation.will,
 				harmless: false,
-				success: HALF,
-				cast_time: STANDARD,
+				fail: take_damage.half,
+				cast_time: movement.standard,
 				},
 			require_attack: true,
 			
 			effect:
 				[
-					{target: DAMAGE, value:{magnitude: STATIC_VALUE, increase: 15}, type: PROFANE},
+					{target: DAMAGE, value:{magnitude: STATIC_VALUE, increase: 15}, type: bonus.profane},
 				],
 						
 		},
@@ -36,29 +36,35 @@ function skills(_code){
 				type: RANGE.RANGED,
 				school: "NIGROMANCE",
 				level:1,
-				salvation: WILL,
+				salvation: actor_salvation.will,
 				harmless: true,
-				success: HALF,
-				target: TARGET_POINTER,
-				cast_time: SWIFT,
+				fail: take_damage.negate,
+				target: point.cursor,
+				cast_time: movement.swift,
 			},
 			
 			require_attack: false,
 			effect:
 				[
-					{target: HIT_POINTS, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: TEMP},
-					{target: HIT_POINTS, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: TEMP},
+					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: TEMP},
+					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: TEMP},
 				],	
 		},
 		{
-			cast_time: STANDARD,
+			code: 9,
+			data: {
+				name:"Swing",
+				description:[ "Ataca con toda la fuerza disponible"],
+				icon: "imagen por montar",
+				range: RANGE.MELEE,
+				origin: ORIGIN.FRONT,
+				fail: take_damage.full,
+				cast_time: movement.standard,
+			},
 			effect:
 				[
-					{target: HIT_POINTS, value:{magnitude: STATIC_VALUE, increase: -10}, type: BLUDGEONING, variant: WEAPON},
+					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: -10}, type: damage.bludgeoning},
 				],
-			name:"Swing",
-			description:[ "Ataca con toda la fuerza disponible"],
-			code:9		
 		},
 	
 	

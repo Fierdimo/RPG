@@ -1,4 +1,4 @@
-if(status == "CASTING"){
+if(status == state.casting){
 		local_frame = Animate();
 }
 else{

@@ -15,6 +15,7 @@
 	//create actors
 	Actors = createActors(actor_list());
 	mainPlayer = Actors[0];			
+		
 	target = mainPlayer.myArrayPosition;
 	doubleClick = false;
 	

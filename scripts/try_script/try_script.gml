@@ -2,7 +2,7 @@ function try_script(){
 
 	var cast_time = 0;
 	
-	if (status == "EXECUTE" || status == "CASTING + EXECUTE") {
+	if (status == state.trying_script|| status == state.trying_script + state.casting) {
 		
 		 // clear global variables				
 			global.found_origin = false;
@@ -13,28 +13,29 @@ function try_script(){
 		
 		var not_pass = false;
 		
-		if (status == "EXECUTE") status = ""
-		else status = "CASTING"
+		if (status == state.trying_script) status = state.bored
+		else status = state.casting
 	
 		switch (pendingAction.data.cast_time){
-			case STANDARD:
+			case movement.standard:
 				if(global.timerStandardAction <= 0) {
 						global.timerStandardAction = max(0, MAX_CAST_TIME - my.stat().standardActionSpeed);
-					cast_time = global.timerStandardAction/2;
+						cast_time = global.timerStandardAction/2;
+						show_debug_message(cast_time)
 				} else not_pass = true;
 				break;
-			case MOVE:
+			case movement.move:
 				if(global.timerMoveAction <= 0){
 					global.timerMoveAction = max(0, (MAX_CAST_TIME-my.stat().moveActionSpeed)/2);
 					cast_time = global.timerMoveAction;
 				} else not_pass = true;
 				break;
-			case SWIFT:
+			case movement.swift:
 				if(global.timerSwiftAction <= 0) {
 					global.timerSwiftAction = max(0, MAX_CAST_TIME-my.stat().swiftActionSpeed);
 				} else not_pass = true;
 				break;
-			case COUNTER:
+			case movement.inmediate:
 				if(global.timerCounterAction <= 0) {
 					global.timerCounterAction = max(0, MAX_CAST_TIME-my.stat().counterActionSpeed);
 				} else not_pass = true;
@@ -51,9 +52,9 @@ function try_script(){
 			return;
 		}			
 			
-		if status == "CASTING"
-				status = "CASTING + RUN"
-		else status = "RUN";
+		if status == state.casting
+				status = state.casting + state.running_script
+		else status = state.running_script;
 	}
 	return cast_time;
 }

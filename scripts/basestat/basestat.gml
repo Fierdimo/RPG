@@ -4,7 +4,7 @@ function BaseStat() constructor{
 		
 	// modificadores
 	
-	abil = new basicStat();
+	ability = new basicStat();
 	alchemical = new basicStat();
 	armor = new basicStat();
 	circumstance = new basicStat();
@@ -21,12 +21,12 @@ function BaseStat() constructor{
 	resistance = new basicStat();
 	sacred = new basicStat();
 	shield = new basicStat();
-	size = new basicStat();
+	size_ = new basicStat();
 	untyped = new basicStat();
 	
 	static total = function (){		
 		return	base.get() 
-				+ abil.get() 
+				+ ability.get() 
 				+ alchemical.get() 
 				+ armor.get() 
 				+ circumstance.get() 
@@ -43,7 +43,7 @@ function BaseStat() constructor{
 				+ resistance.get() 
 				+ sacred.get() 
 				+ shield.get() 
-				+ size.get() 
+				+ size_.get() 
 				+ untyped.get();
 	}
 	
@@ -62,84 +62,84 @@ function BaseStat() constructor{
 		}	
 	}
 	
-	static add = function (value, type=UNTYPED) {
+	static add = function (value, type=bonus.untyped) {
 		static change = {};
 		switch (type){
-			case BASE:				
+			case bonus.base:				
 				change = evaluate(base.get(), value);
 				base.set(change.value);
 				break;
-			case ALCHEMICAL:
+			case bonus.alchemical:
 				change = evaluate(alchemical.get(), value);
 				alchemical.set(change.value);
 				break;
-			case ARMOR:
+			case bonus.armor:
 				change = evaluate(armor.get(), value);
 				armor.set(change.value);
 				break;
-			case CIRCUMSTANCE:
+			case bonus.circumstance:
 				circumstance.add(value);
 				change.result = true;
 				break;
-			case COMPETENCE:
+			case bonus.competence:
 				change = evaluate(competence.get(), value);
 				competence.set(change.value);
 				break
-			case DEFLECTION:
+			case bonus.deflection:
 				change = evaluate(deflection.get(), value);
 				deflection.set(change.value);
 				break
-			case DODGE:
+			case bonus.dodge:
 				dodge.add(value);
 				change.result = true;
 				break;
-			case ENHANCEMENT:
+			case bonus.enhancement:
 				change = evaluate(enhancement.get(), value);
 				enhancement.set(change.value);
 				break
-			case INSIGHT:
+			case bonus.insight:
 				change = evaluate(insight.get(), value);
 				insight.set(change.value);
 				break
-			case LUCK:
+			case bonus.luck:
 				change = evaluate(luck.get(), value);
 				luck.set(change.value);
 				break
-			case MORALE:
+			case bonus.morale:
 				change = evaluate(morale.get(), value);
 				morale.set(change.value);
 				break
-			case NATURAL_ARMOR:
+			case bonus.natural_armor:
 				change = evaluate(natural_armor.get(), value);
 				natural_armor.set(change.value);
 				break
-			case PROFANE:
+			case bonus.profane:
 				change = evaluate(profane.get(), value);
 				profane.set(change.value);
 				break
-			case RACIAL:
+			case bonus.racial:
 				change = evaluate(racial.get(), value);
 				racial.set(change.value);
 				break
-			case RESISTANCE:
+			case bonus.resistance:
 				change = evaluate(resistance.get(), value);
 				resistance.set(change.value);
 				break
-			case SACRED:
+			case bonus.sacred:
 				change = evaluate(sacred.get(), value);
 				sacred.set(change.value);
 				break
-			case SHIELD:
+			case bonus.shield:
 				change = evaluate(shield.get(), value);
 				shield.set(change.value);
 				break
-			case SIZE:
-				change = evaluate(size.get(), value);
-				size.set(change.value);
+			case bonus.size:
+				change = evaluate(size_.get(), value);
+				size_.set(change.value);
 				break
-			case ABILITY:
-				change = evaluate(abil.get(), value);
-				abil.set(change.value);
+			case bonus.ability:
+				change = evaluate(ability.get(), value);
+				ability.set(change.value);
 				break
 			default:
 				untyped.add(value);

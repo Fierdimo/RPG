@@ -1,8 +1,9 @@
 function ArmorClass(): BaseStat() constructor{
 	
-	base.add(10, BASE)
+	base.add(10, bonus.base)
 	
 	static touch = function (shieldTo = false){		
+		#region // RETURN WITHOUT  ARMORS
 		result =  base.get() 
 				+ ability.get() 
 				+ alchemical.get() 
@@ -18,13 +19,16 @@ function ArmorClass(): BaseStat() constructor{
 				+ racial.get() 
 				+ resistance.get() 
 				+ sacred.get()  
-				+ size.get() 
+				+ size_.get() 
 				+ untyped.get();
+		
 		if(shieldTo) result += shield.get();
+		#endregion
 		return result
 	}
 	
 	static flatFooted = function (abilityTo = false){		
+		#region // RETURN WITHOUT DEX
 		result =  base.get()  
 				+ alchemical.get() 
 				+ armor.get() 
@@ -41,13 +45,13 @@ function ArmorClass(): BaseStat() constructor{
 				+ resistance.get() 
 				+ sacred.get() 
 				+ shield.get() 
-				+ size.get() 
+				+ size_.get() 
 				+ untyped.get();
 				
 		if (abilityTo) result += (+ ability.get() 
 											+ shield.get()
 											+ dodge.get())
-							
+		#endregion
 		return result
 	}
 }

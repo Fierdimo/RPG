@@ -6,17 +6,17 @@ function extractByStat(value, fixed = false){
 		if(value.magnitude == STATIC_VALUE) return eval;
 		else{
 			switch(eval){
-				case STR:
+				case actor_stat.strength:
 					return my.stat().strength.modificator * value.magnitude;
-				case DEX:
+				case actor_stat.dexterity:
 					return my.stat().dexterity.modificator * value.magnitude;
-				case CON:
+				case actor_stat.constitution:
 					return my.stat().constitution.modificator * value.magnitude;
-				case INT:
+				case actor_stat.intelligence:
 					return my.stat().intelligence.modificator * value.magnitude;
-				case WIS:
+				case actor_stat.wisdom:
 					return my.stat().wisdom.modificator * value.magnitude;
-				case CHA:
+				case actor_stat.charisma:
 					return my.stat().charisma.modificator * value.magnitude;
 				default:
 					return 0;

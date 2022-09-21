@@ -10,6 +10,7 @@ db = {
 	hitPointsTemp:		0,
 	
 	armor_class:		10,
+	size: size.medium,
 	
 	fue:			10,
 	dex:			10,
@@ -44,7 +45,7 @@ db = {
 	
 	standardActionSpeed:	0,
 	swiftActionSpeed:		0,
-	counterActionSpeed:		0,
+	inmediateActionSpeed:		0,
 	moveActionSpeed:		0,
 	
 	walkSpeed:				0.5,

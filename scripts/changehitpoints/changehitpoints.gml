@@ -2,7 +2,7 @@ function changeHitPoints(damage_factor){
 	var _actual_ = 0;
 	while(_actual_ < array_length(myBuffs)){	
 		
-		if(myBuffs[_actual_].target == DAMAGE || myBuffs[_actual_].target == HEAL){
+		if(myBuffs[_actual_].target == DAMAGE || myBuffs[_actual_].target == actor_ability.heal){
 			var toMark = floor(extractByStat(myBuffs[_actual_].value) * damage_factor);			
 			var typeOfThisBuff = myBuffs[_actual_].type;
 			
@@ -12,7 +12,7 @@ function changeHitPoints(damage_factor){
 			//check for DR/ER
 			var subSearch = 0
 			while(array_length(myBuffs) > subSearch){
-				if(myBuffs[subSearch].target == DAMAGE_REDUCTION && myBuffs[subSearch].type == typeOfThisBuff){						
+				if(myBuffs[subSearch].target == actor_base.damage_reduction && myBuffs[subSearch].type == typeOfThisBuff){						
 					toMark += extractByStat(myBuffs[subSearch].value);
 					if (toMark >= 0) return 0;
 				}
@@ -23,7 +23,7 @@ function changeHitPoints(damage_factor){
 			var search = 0;
 			while(array_length(myBuffs) > search){
 						
-				if(myBuffs[search].target == HIT_POINTS && myBuffs[search].type == TEMP){ 
+				if(myBuffs[search].target == actor_base.hit_points && myBuffs[search].type == TEMP){ 
 					if (myBuffs[search].value.magnitude != STATIC_VALUE) convertToStatic (myBuffs[search].value )
 										
 					var hitPointsTemp = myBuffs[search].value.increase

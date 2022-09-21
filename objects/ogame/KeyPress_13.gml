@@ -1,4 +1,4 @@
 with(mainPlayer){
-	if ((status == "WAIT" or status == "CASTING + WAIT")&& global.found_origin)
-		status = "EXECUTE"
+	if ((status == state.waiting_for_target or status == state.waiting_for_target + state.casting)&& global.found_origin)
+		status = state.trying_script
 }

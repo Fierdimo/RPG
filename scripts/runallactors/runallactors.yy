@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Controls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "runAllActors",
+  "name": "runallactors",
   "tags": [],
   "resourceType": "GMScript",
 }

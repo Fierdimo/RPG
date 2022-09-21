@@ -7,7 +7,7 @@ function HitPoints() constructor{
 	
 	function add(value, type, maxVal){
 		switch(type){
-			case BASE:
+			case bonus.base:
 				base.add(value);
 				break;
 			case TEMP:

@@ -4,10 +4,10 @@ function gearsToBuff(){
 		var effect_index = 0;
 		var gearEffect = myGears.equiped[i].effect;
 		repeat(array_length(gearEffect)){
-			if(gearEffect[effect_index].variant == ACTION_KEY ){ 
+			if(variable_struct_exists(gearEffect[effect_index], "skillCode")){
 				if(gearEffect[effect_index].key != "") actionKeys.add(gearEffect[effect_index].key, skills(gearEffect[effect_index].skillCode));
 			}
-			else
+			else	
 				array_push(myBuffs, myGears.equiped[i].effect[effect_index] )
 			
 			effect_index++;

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "GENERAL",
-    "path": "folders/Scripts/GENERAL.yy",
+    "name": "CONSTANTS",
+    "path": "folders/Scripts/GENERAL/CONSTANTS.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ENUMS",
+  "name": "PLAYER_STATS",
   "tags": [],
   "resourceType": "GMScript",
 }

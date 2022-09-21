@@ -1,5 +1,5 @@
 function wait_for_target(){
-	if (status == "WAIT" || status == "CASTING + WAIT"){
+	if (status == state.waiting_for_target || status == state.waiting_for_target + state.casting){
 //===========WAITING FOR ORIGIN POINT ==========================
 		global.search_origin = true;
 		global.cursor = cr_cross;

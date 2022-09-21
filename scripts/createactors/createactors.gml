@@ -19,7 +19,7 @@ function createActors(actor_list_db, actor_instance_array = []){
 			buffTimer= get_timer();
 			doubleClick = true;
 			distance = 0;
-			status = "";
+			status = state.bored;
 		}
 	}
 	return actor_instance_array;

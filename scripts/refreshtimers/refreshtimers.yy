@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Controls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "refreshTimers",
+  "name": "refreshtimers",
   "tags": [],
   "resourceType": "GMScript",
 }

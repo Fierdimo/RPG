@@ -15,14 +15,14 @@ while(indx < array_length(Actors)){
 			}
 		draw_self();
 		shader_reset();
-		draw_text(x,y,status);
+		if(status) draw_text(x, y, abs((global.timerStandardAction/2)-(MAX_CAST_TIME-my.stat().standardActionSpeed)/4));
 		}
 	indx++;
 }
 //===================================================== AREA DRAWS =========================================================
 if (global.in_range) var colour = c_aqua;
 else var colour = c_red;
-if(mainPlayer.status == "CASTING" || mainPlayer.status == "CASTING + RUN")
+if(mainPlayer.status == state.casting || mainPlayer.status == state.running_script + state.casting)
 	if (global.pulse mod 2) colour = c_silver
 
 draw_set_color(colour);
