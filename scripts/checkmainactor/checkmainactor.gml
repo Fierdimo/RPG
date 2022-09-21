@@ -1,11 +1,11 @@
 function checkMainActor(actor){		
-	
-	with(mainPlayer){
-		pendingAction = if_action_pushed(actionKeys.scan(status));
-		show_debug_message(my.stat().CA)
-		wait_for_target();
 		
-		decode_script(execute, try_script());
+	with(mainPlayer){
+		//show_debug_message(my.stat().strength)
+	
+		pendingAction = if_action_pushed(actionKeys.scan(status));
+		wait_for_target();
+		catch_script(execute, try_script());
 		
 		//TODO: generate Attack of opportunity when casting
 		finishOldBuffs();

@@ -21,7 +21,6 @@ function try_script(){
 				if(global.timerStandardAction <= 0) {
 						global.timerStandardAction = max(0, MAX_CAST_TIME - my.stat().standardActionSpeed);
 						cast_time = global.timerStandardAction/2;
-						show_debug_message(cast_time)
 				} else not_pass = true;
 				break;
 			case movement.move:

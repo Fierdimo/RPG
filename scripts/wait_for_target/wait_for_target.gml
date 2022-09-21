@@ -1,10 +1,11 @@
 function wait_for_target(){
 	if (status == state.waiting_for_target || status == state.waiting_for_target + state.casting){
+		var is_area_attack = variable_struct_exists(pendingAction.data, "area")
 //===========WAITING FOR ORIGIN POINT ==========================
 		global.search_origin = true;
 		global.cursor = cr_cross;
 				
-		if (!global.found_origin) global.in_range = get_range(pendingAction.data)
+		if (!global.found_origin || not is_area_attack) global.in_range = get_range(pendingAction.data)
 				
 		if (pendingAction.data.origin != ORIGIN.TARGET ){ 
 			global.origin_x = x;
@@ -12,8 +13,8 @@ function wait_for_target(){
 			global.found_origin = true;
 			global.in_range = true;
 		}
-//================ IF EXIST ORIGIN POINT ========================		
-		if (global.found_origin) {	
+//================ IF EXIST ORIGIN POINT FOR AREA DETECTION ========================		
+		if (global.found_origin && is_area_attack) {	
 			
 			global.search_origin = false;
 			global.cursor = cr_size_all;
@@ -27,9 +28,7 @@ function wait_for_target(){
 			if (pendingAction.data.origin == ORIGIN.TARGET || pendingAction.data.origin == ORIGIN.SELF ){
 				global.angle = (point_direction(global.origin_x, global.origin_y, mouse_x, mouse_y));}
 			else
-				global.angle = ((direction * 90))+pendingAction.data.origin;
-			
-			
+				global.angle = ((direction * 90))+pendingAction.data.origin;			
 		}
 	}
 }

@@ -159,7 +159,6 @@ function Player() constructor{
 					touch:			armorClass.touch(),
 					flat_footed:	armorClass.flatFooted(),
 					},
-				det: armorClass,
 				reach:			myReach.get(),
 			#endregion
 			#region  // STATS	

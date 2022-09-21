@@ -1,5 +1,8 @@
 
 if (global.search_origin && global.in_range){
+	
+	get_target_from_cursor();
+	
 	global.origin_x = mouse_x;
 	global.origin_y = mouse_y
 	global.found_origin = true;

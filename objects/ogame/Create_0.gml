@@ -18,6 +18,7 @@
 		
 	target = mainPlayer.myArrayPosition;
 	doubleClick = false;
+	selected = false; //IT NEVER MUST CHANGE
 	
 	//=== DRAWING EFFECTS VARIABLES ===
 	global.clickTime = current_time;

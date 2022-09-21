@@ -6,3 +6,4 @@ if(mainPlayer.status != state.casting || mainPlayer.status != state.running_scri
 	mainPlayer.status = state.bored;
 	global.cursor= cr_default;
 }
+with(all) selected = false;

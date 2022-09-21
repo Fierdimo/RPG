@@ -1,4 +1,4 @@
-function decode_script(execution_function, cast_time){
+function catch_script(execution_function, cast_time){
 	if (status = state.running_script || status == state.running_script + state.casting){
 			
 		if status == state.running_script + state.casting
