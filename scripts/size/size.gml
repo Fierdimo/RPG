@@ -18,6 +18,8 @@ enum size {
 	special,
 	stealth,
 	fly,
+	meters,
+	foot,
 	
 }
 	

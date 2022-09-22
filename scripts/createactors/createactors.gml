@@ -5,8 +5,6 @@ function createActors(actor_list_db, actor_instance_array = []){
 				myBuffs:[],
 				myPendigBuffs: [],
 				pendingAction: {},
-				myGears: new Equip_gears(),
-				myBag: new Equip_gears(),
 				myName: actor_list_db[position].name,
 				selected: false,
 				changed: true,

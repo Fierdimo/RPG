@@ -31,6 +31,7 @@ draw_primitive_begin(pr_trianglefan);
 draw_vertex_colour(global.origin_x, global.origin_y, c_white, 0.1);
 			
 	switch(global.shape) {
+		//TODO: RING, multiSQUARE
 		case SHAPE.BURST:			
 			for(var i = global.angle; i <= 360+global.angle; i++;){
 			    draw_vertex_colour(global.origin_x + lengthdir_x(global.area_spread, i -45), global.origin_y + lengthdir_y(global.area_spread, i -45), colour, 0.2);

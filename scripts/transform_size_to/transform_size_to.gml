@@ -167,5 +167,7 @@ function transform_size_to(_stat_, _size_){
 		case size.special:	return special(_size_);
 		case size.fly:			return fly(_size_);
 		case size.stealth:	return stealth(_size_);
+		case size.foot:		return _size_ / 3.281;
+		case size.meters:	return _size_ * 3.281;
 	}
 }

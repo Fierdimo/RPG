@@ -1,18 +1,13 @@
 function buildActor(){
-	my = create_player(db);
-	
-	essemble_gears(db.gear, EQUIPMENT);
-	essemble_gears(db.bag, BAG);
-	
 	if(object_index == oPlayer){
-		myName = db.name
-		actionKeys = new CheckActionKeys();
-		skill_seconds = current_second;
+		myName = db.name;
 	}
-	gearsToBuff();
 	
-	for(var i = 0; i < array_length(myBuffs); i++)
-		{my.stat(myBuffs[i].target, extractByStat(myBuffs[i].value), myBuffs[i].type );}
-	walkSpeed = my.stat().walkSpeed;
+	actionKeys = new CheckActionKeys();
 	
+	my = create_player(db);	
+	my.essemble_equipment(db.gears_db);
+	my.equipment_to_buff(actionKeys, myBuffs);
+	
+	walkSpeed = my.stat().walkSpeed;	
 }

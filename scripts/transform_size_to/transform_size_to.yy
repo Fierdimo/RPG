@@ -6,7 +6,7 @@
     "path": "folders/Scripts/GENERAL.yy",
   },
   "resourceVersion": "1.0",
-  "name": "gearsToBuff",
+  "name": "transform_size_to",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -1,3 +1,5 @@
+
+#region //ACTOR STATEMENTS
 // This values can't be 0 o reapear betwen them
 enum actor_base{
 	size = 1,
@@ -7,7 +9,6 @@ enum actor_base{
 	damage_reduction,
 	tail,
 }
-
 enum actor_stat{
 	strength = actor_base.tail,
 	dexterity,
@@ -45,8 +46,6 @@ enum actor_ability{
 	taylor,
 	tail,
 }
-
-
 enum spd{
 	free_action = actor_ability.tail,
 	standard_action,
@@ -56,4 +55,19 @@ enum spd{
 	casting,
 	tail,
 }
-
+#endregion
+#region //ITEMS
+enum GEAR{
+weapons,
+head,
+shoulders,
+torso,
+arms,
+hands,
+rings,
+foot,
+soul,
+bag,
+tail
+}
+#endregion

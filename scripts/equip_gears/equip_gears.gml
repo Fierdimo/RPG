@@ -1,13 +1,13 @@
 function Equip_gears() constructor{
-	equiped = [];
+	slotted = [];
 	function add(_gear){
 		var gear = new Equipment(_gear);
-		array_push(equiped, gear);
+		array_push(slotted, gear);
 	}
 	
 	function del(index){
-		array_delete(equiped, index, 1);
+		array_delete(slotted, index, 1);
 	}
 	
-	function show(){return equiped }
+	function show(){return slotted }
 }

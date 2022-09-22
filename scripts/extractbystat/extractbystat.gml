@@ -1,23 +1,26 @@
-function extractByStat(value, fixed = false){
+function extractByStat(value, fixed = false, inConstructor = false){
 	
 	var eval = value.increase;
 	if(fixed)eval = value.fixed;
+	
+	if (inConstructor) var statement = stat();
+	else var statement = my.stat();
 	
 		if(value.magnitude == STATIC_VALUE) return eval;
 		else{
 			switch(eval){
 				case actor_stat.strength:
-					return my.stat().strength.modificator * value.magnitude;
+					return statement.strength.modificator * value.magnitude;
 				case actor_stat.dexterity:
-					return my.stat().dexterity.modificator * value.magnitude;
+					return statement.dexterity.modificator * value.magnitude;
 				case actor_stat.constitution:
-					return my.stat().constitution.modificator * value.magnitude;
+					return statement.constitution.modificator * value.magnitude;
 				case actor_stat.intelligence:
-					return my.stat().intelligence.modificator * value.magnitude;
+					return statement.intelligence.modificator * value.magnitude;
 				case actor_stat.wisdom:
-					return my.stat().wisdom.modificator * value.magnitude;
+					return statement.wisdom.modificator * value.magnitude;
 				case actor_stat.charisma:
-					return my.stat().charisma.modificator * value.magnitude;
+					return statement.charisma.modificator * value.magnitude;
 				default:
 					return 0;
 			}

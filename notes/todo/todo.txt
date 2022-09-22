@@ -2,10 +2,25 @@ TODO::  >>>>>>>>>>> sprite_index  <<<<<<<<<<<<
 
 SIstema de ataque
 
+		---------------->  Gear System
+					
+					1. slots DONE
+							-Equiped
+							-Bag
+					2. run equips on player DONE		
+					3. swap betwen equip and bag
+					
+	TODO : cambiar ENTER por la misma Key que originó el evento				
+					
+					
+					
+					
+	======================================================================
+
 	--- 2. sistema de target 
 		---------->implementar equipos y estadisticas de ataque DOING		
-		----------> señal de seleccion	>>>>			
-		----------> señal <cuerpo a cuerpo> y <a distancia> 
+		----------> FLAG de seleccion	>>>>			DONE
+		----------> FLAG <cuerpo a cuerpo> y <a distancia> DOING
 				---------> rango de armas
 		----------> aliado vs enemigo
 		

@@ -2,22 +2,24 @@
 #region //	spells descriptors
 
 enum SHAPE{
-	none = 0,
-	CONE = 1,
-	BURST = 2,
-	LINE = 3,
-	SQUARE = 4
+	none,
+	CONE,
+	BURST,
+	LINE,
+	SQUARE,
 }
+
 enum RANGE{	
-	 MELEE = -2,
-	 RANGED = -1,
-	 PERSONAL = 1,
-	 TOUCH = 2,
-	 CLOSE = 3,
-	 MEDIUM = 4,
-	 LONG = 5,
-	 UNLIMITED = 6	
+	 MELEE,
+	 RANGED,
+	 PERSONAL,
+	 TOUCH,
+	 CLOSE,
+	 MEDIUM,
+	 LONG,
+	 UNLIMITED
 }
+
 enum ORIGIN{
 	TARGET = -2,	
 	SELF = -1,
@@ -26,13 +28,15 @@ enum ORIGIN{
 	BACK = 90,
 	RIGHT = 135,	
 }
+
 enum point{
-	me = 0,
-	other = 1,
-	either =2,
-	cursor = 3,
-	equiped = 4,
+	me,
+	other,
+	either,
+	cursor,
+	equiped,
 }
+
 enum take_damage{
 	negate,
 	half,
@@ -40,11 +44,12 @@ enum take_damage{
 }
 
 enum movement{
-	standard,
-	move,
+	free,
 	swift,
 	inmediate,
-	free
+	move,
+	standard,
+	full_attack,
 }
 #endregion
 #region //	damage types

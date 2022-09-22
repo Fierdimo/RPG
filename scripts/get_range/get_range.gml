@@ -1,17 +1,23 @@
 function get_range(data, target = "CURSOR", origin = oGame.mainPlayer){
 	if(target == "CURSOR")
-			distance = point_distance(origin.x, origin.y, mouse_x, mouse_y);
+			var distance = transform_size_to(size.foot, point_distance(origin.x, origin.y, mouse_x, mouse_y));
 	else
-			distance = point_distance(origin.x, origin.y, target.x, target.y);
-			
+			var distance = transform_size_to(size.foot, point_distance(origin.x, origin.y, target.x, target.y));
+
 	switch(data.range){
 			case RANGE.PERSONAL:
 				return true;
 			case RANGE.TOUCH:
-				if (distance < 1.5) return true;
+				if (distance < origin.my.stat().reach) return true;
+				break;
+			case RANGE.MELEE:
+				if (distance < origin.my.stat().reach) return true;
+				break;
+			case RANGE.RANGED:
+				if (distance < origin.my.stat().reach) return true;
 				break;
 			case RANGE.CLOSE:
-				if (distance < 25+(data.level * 2.5)) return true;
+				if (distance < 25+(data.level * 2.5)) return true; // ¿¿ maybe >> if (distance < 25+(origin.my.stat().CASTER_LEVEL * 2.5))  ??
 				break;
 			case RANGE.MEDIUM:
 				if (distance < 100+(data.level * 10)) return true;

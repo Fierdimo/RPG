@@ -70,27 +70,69 @@ db = {
 	walkSpeed:					1.2,
 	dashMultiplicator:		2,
 	runMultiplicator:			4, 
-	
-	gear: [
+
+	gears_db: [
 		{
-			code:002, 
-			playerDefined: [5,0,10,10,0,0,"C"], 
-			experience: 0				
+			maxiimum : 2,
+			content: [
+			]
+		},				
+		{
+			maxiimum : 1,
+			content: []
 		},
 		{
-			code:003, 
-			playerDefined: ["A"], 
-			experience: 0				
+			maxiimum : 1,
+			content: []
+		},		
+		{
+			maxiimum : 1,
+			content: []
+		},		
+		{
+			maxiimum : 1,
+			content: []
+		},
+		{
+			maxiimum : 1,
+			content: []
+		},
+		{
+			maxiimum : 1,
+			content: [
+				{
+				code:003, 
+				playerDefined: ["A"], 
+				experience: 0				
+			},
+			]
+		},
+		{
+			maxiimum : 1,
+			content: []
+		},
+		{
+			maxiimum : 1,
+			content: [
+				{
+					code:002, 
+					playerDefined: [6,0,10,10,0,0,"w"], 
+					experience: 0				
+				},]
+		},		
+		{
+			maxiimum : 12,
+			content: [
+				{
+					code:002, 
+					playerDefined: [6,0,10,10,0,0,"C"], 
+					experience: 0				
+				},
+				
+			]
 		},
 	],
-	
-	bag: [
-		{
-			code:002, 
-			playerDefined: [6,0,10,10,0,0,"w"], 
-			experience: 0				
-		},
-	],
+
 }
 
 //--------Dialogue Stuff

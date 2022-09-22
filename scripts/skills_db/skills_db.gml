@@ -32,7 +32,7 @@ function skills(_code){
 				name:"FALSE LIFE",
 				description:[ "Muerto pero vivo"],
 				icon: "imagen por montar",
-				range: RANGE.MEDIUM,
+				range: RANGE.CLOSE,
 				type: RANGE.RANGED,
 				origin: ORIGIN.TARGET,
 				school: "NIGROMANCE",
@@ -62,6 +62,7 @@ function skills(_code){
 				fail: take_damage.full,
 				cast_time: movement.standard,
 			},
+			require_attack: true,
 			effect:
 				[
 					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: -10}, type: damage.bludgeoning},

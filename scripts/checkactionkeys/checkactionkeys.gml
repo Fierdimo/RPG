@@ -22,6 +22,7 @@ function CheckActionKeys() constructor{
 						show_debug_message("ERROR: can't cast while casting standard or move action")
 						return  {pushed: false};
 					}
+					global.shape = SHAPE.none
 				//========================================
 				repeat(array_length(myBuffos)){
 					if(variable_struct_exists(myBuffos[command], "time")) 
