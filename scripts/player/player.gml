@@ -232,6 +232,7 @@ function Player() constructor{
 					else continue; // Item does't exist in DB
 				
 					equipments[slot].add(newItem); // Save in structure
+					
 			}
 		}	
 	}
@@ -258,7 +259,9 @@ function Player() constructor{
 		for(var i = 0; i < array_length(myBuffs); i++)
 			{stat(myBuffs[i].target, extractByStat(myBuffs[i].value,,true), myBuffs[i].type );}
 	
+	
 	}
+	
 	#endregion
 	
 }

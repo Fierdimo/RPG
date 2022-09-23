@@ -75,6 +75,11 @@ db = {
 		{
 			maxiimum : 2,
 			content: [
+			{
+				code:003, 
+				playerDefined: ["A"], 
+				experience: 0				
+			},
 			]
 		},				
 		{
@@ -124,6 +129,26 @@ db = {
 			maxiimum : 12,
 			content: [
 				{
+					code:002, 
+					playerDefined: [6,0,10,10,0,0,"C"], 
+					experience: 0				
+				},
+				{
+					code:002, 
+					playerDefined: [6,0,10,10,0,0,"C"], 
+					experience: 0				
+				},
+					{
+					code:002, 
+					playerDefined: [6,0,10,10,0,0,"C"], 
+					experience: 0				
+				},
+					{
+					code:002, 
+					playerDefined: [6,0,10,10,0,0,"C"], 
+					experience: 0				
+				},
+					{
 					code:002, 
 					playerDefined: [6,0,10,10,0,0,"C"], 
 					experience: 0				

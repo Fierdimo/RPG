@@ -1,48 +1,43 @@
 
 	randomize();
 	
-	//Start variables	
-	global.paused_game = false;
-	global.pulse = 0.0;
-	
 	//	Time factors
 	actionTimer = get_timer();	
-	global.timerStandardAction = 0;
-	global.timerMoveAction = 0;
-	global.timerSwiftAction = 0;
-	global.timerCounterAction = 0;
 		
 	//create actors
 	Actors = createActors(actor_list());
 	mainPlayer = Actors[0];			
-		
 	target = mainPlayer.myArrayPosition;
 	doubleClick = false;
+	
 	selected = false; //IT NEVER MUST CHANGE
 	
-	//=== DRAWING EFFECTS VARIABLES ===
-	global.clickTime = current_time;
-	global.search_origin = false;
-	global.found_origin = false;	
-	global.cursor = cr_default;
-	global.origin_x = 0;
-	global.origin_y = 0;	 
-	global.angle = 0;
-	global.area_spread = 0;
-	global.shape = SHAPE.none;
-	global.in_range = true;
+	gui_gear = new buttons_DnD();
 	
-	
-	// test 
-	global.origin_in_main_player = false;
-	global.attack_from_front= false;
-	
-
-	
-	show_debug_overlay(true);
-	
-	
-	
-
-	
+			var bag_slot = 1;
+			var myBag = variable_instance_get(mainPlayer.my, "bag" ).show(); // valido solo si consigo el maximo por slot, que estan en DB
+			repeat 12 { 
+				var x_slot = (ceil(bag_slot/4)*4)-bag_slot;
+				var y_slot = ((ceil(bag_slot/4)*4)/4)-1;
+				if bag_slot <= array_length(myBag) gui_gear.add(44+(x_slot*80), 96+y_slot*(32), btn_green, btn_blue, true);
+				else  gui_gear.add(44+(x_slot*80), 96+y_slot*(32), btn_void);
+				
+				
+				bag_slot++;
+			}
+			
+			var myWeapons = variable_instance_get(mainPlayer.my, "weapons").show();  // valido solo si consigo el maximo por slot, que estan en DB
+			var weapons_slot = 0
+			repeat 2{
+				if weapons_slot < array_length(myWeapons){
+					gui_gear.add(423+(weapons_slot*48), 72, icn_cross_swords, btn_blue );
+					//draw_text(gui_x+423+(weapons_slot*48), gui_y+80, myWeapons[weapons_slot].name);
+				} else gui_gear.add(423+(weapons_slot*48), 72, icn_void );
+				weapons_slot ++;
+			}
+			
+			
+		
+		gui_gear.set_function_press(mark_availability)
+		gui_gear.set_function_release(change_slot)
 

@@ -8,9 +8,9 @@ SIstema de ataque
 							-Equiped
 							-Bag
 					2. run equips on player DONE		
-					3. swap betwen equip and bag
+					3. swap betwen equip and bag DOING...
 					
-	TODO : cambiar ENTER por la misma Key que originó el evento				
+	TODO : cambiar de ENTER a la misma Key que originó el evento				
 					
 					
 					

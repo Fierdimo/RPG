@@ -7,10 +7,8 @@ function try_script(){
 		 // clear global variables				
 			global.found_origin = false;
 			global.search_origin = false;
-			global.origin_in_main_player = false;
 			global.cursor = cr_default;
 
-		
 		var not_pass = false;
 		
 		if (status == state.trying_script) status = state.bored

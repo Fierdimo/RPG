@@ -16,3 +16,4 @@ if(doubleClick && global.in_range){
 			status = state.trying_script;
 	}
 }
+

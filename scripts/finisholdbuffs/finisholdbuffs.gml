@@ -27,7 +27,12 @@ function finishOldBuffs(){
 	}
 	
 	if changed{ 
+	
 		my = create_player(db);
-		reBuffActor();}
+		
+		my.essemble_equipment(db.gears_db);
+		reBuffActor();
+		walkSpeed = my.stat().walkSpeed;	
+		}
 }
 
