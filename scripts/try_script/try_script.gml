@@ -1,7 +1,6 @@
 function try_script(){
 
 	var cast_time = 0;
-	
 	if (status == state.trying_script|| status == state.trying_script + state.casting) {
 		
 		 // clear global variables				

@@ -47,8 +47,8 @@ function skills(_code){
 			require_attack: true,
 			effect:
 				[
-					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: TEMP},
-					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: TEMP},
+					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},
+					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},
 				],	
 		},
 		{

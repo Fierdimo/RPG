@@ -1,5 +1,7 @@
 TODO::  >>>>>>>>>>> sprite_index  <<<<<<<<<<<<
 
+
+CREAR UN BUFF UNIVERSAL DONDE SE ALMACENEN LAS ESTADISTICAS DE HitPoints
 SIstema de ataque
 
 		---------------->  Gear System
@@ -9,16 +11,11 @@ SIstema de ataque
 							-Bag
 					2. run equips on player DONE		
 					3. swap betwen equip and bag DOING...
-					
-	TODO : cambiar de ENTER a la misma Key que originó el evento				
-					
-					
-					
-					
+						
 	======================================================================
 
 	--- 2. sistema de target 
-		---------->implementar equipos y estadisticas de ataque DOING		
+		---------->implementar equipos y estadisticas de ataque DOING ****
 		----------> FLAG de seleccion	>>>>			DONE
 		----------> FLAG <cuerpo a cuerpo> y <a distancia> DOING
 				---------> rango de armas

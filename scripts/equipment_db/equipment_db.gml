@@ -9,9 +9,9 @@ function equipment_db(_code){
 			{ target: actor_stat.strength, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: bonus.enhancement, },
 			{ target: actor_stat.constitution, value:{magnitude: "STATIC_VALUE", increase: 4}, type: bonus.enhancement, },
 			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: bonus.base, },
-			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "MARKED", },
+			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: bonus.marked, },
 			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.constitution}, type: bonus.base, },
-			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.constitution}, type: "MARKED", },
+			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.constitution}, type: bonus.marked, },
 			{ skillCode: 7}
 		]},
 		
@@ -22,12 +22,12 @@ function equipment_db(_code){
 		description: "2do nivel",
 		experience_conditions:{},
 		effect: [
-			{ target: actor_base.reach, value:{magnitude: "STATIC_VALUE", increase: 5}, type: bonus.temporal},
+			{ target: actor_base.reach, value:{magnitude: "STATIC_VALUE", increase: 5}, type: bonus.untyped},
 			{ target: actor_stat.constitution, value:{magnitude: "STATIC_VALUE", increase: 6}, type: bonus.enhancement, },
 			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: bonus.base, },
-			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: "MARKED", },
+			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: bonus.marked, },
 			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.charisma}, type: bonus.base, },
-			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.charisma}, type: "MARKED", },
+			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.charisma}, type: bonus.marked, },
 			{ skillCode: 9}
 		]},
 		{

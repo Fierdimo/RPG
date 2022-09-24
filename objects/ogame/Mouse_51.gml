@@ -1,4 +1,4 @@
-if(mainPlayer.status != state.casting || mainPlayer.status != state.running_script + state.casting){
+if(mainPlayer.status != state.casting && mainPlayer.status != state.running_script + state.casting){
 	global.doubleClick = false
 	global.search_origin = false;
 	global.found_origin = false;

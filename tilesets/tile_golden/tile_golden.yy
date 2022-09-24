@@ -1,5 +1,4 @@
 {
-  "name": "tile_golden",
   "spriteId": {
     "name": "golden_gui",
     "path": "sprites/golden_gui/golden_gui.yy",
@@ -10,13 +9,13 @@
   "tileyoff": 0,
   "tilehsep": 0,
   "tilevsep": 0,
-  "out_tilehborder": 2,
-  "out_tilevborder": 2,
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
   },
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
   "out_columns": 42,
   "tile_count": 1802,
   "autoTileSets": [
@@ -7485,6 +7484,7 @@
     "path": "folders/Tile Sets/GUI.yy",
   },
   "resourceVersion": "1.0",
+  "name": "tile_golden",
   "tags": [],
   "resourceType": "GMTileSet",
 }

@@ -23,7 +23,7 @@ function changeHitPoints(damage_factor){
 			var search = 0;
 			while(array_length(myBuffs) > search){
 						
-				if(myBuffs[search].target == actor_base.hit_points && myBuffs[search].type == TEMP){ 
+				if(myBuffs[search].target == actor_base.hit_points && myBuffs[search].type == bonus.temporal){ 
 					if (myBuffs[search].value.magnitude != STATIC_VALUE) convertToStatic (myBuffs[search].value )
 										
 					var hitPointsTemp = myBuffs[search].value.increase

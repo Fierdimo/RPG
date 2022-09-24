@@ -92,5 +92,7 @@ enum bonus{
 	shield,
 	size,	
 	temporal,
+	marked,
+	maxHP
 }
 #endregion

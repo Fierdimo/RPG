@@ -24,8 +24,8 @@ db = {
 	
 	name:				"Fierdimo",
 	
-	hitPoints:			10,
-	hitPointsMarked:	10,
+	hitPoints:			100,
+	hitPointsMarked:	100,
 	hitPointsTemp:		0,
 	
 	armor_class:		10,

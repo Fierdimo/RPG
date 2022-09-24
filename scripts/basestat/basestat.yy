@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "GENERAL",
-    "path": "folders/Scripts/GENERAL.yy",
+    "name": "construtors",
+    "path": "folders/Scripts/GENERAL/construtors.yy",
   },
   "resourceVersion": "1.0",
   "name": "baseStat",

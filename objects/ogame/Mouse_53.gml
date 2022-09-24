@@ -9,6 +9,7 @@ if (global.search_origin && global.in_range){
 }
 
 doubleClick = checkDoubleClick(doubleClick)
+
 if(doubleClick && global.in_range){
 	doubleClick = false;
 	with(mainPlayer){

@@ -97,7 +97,7 @@ function Player() constructor{
 		
 			if (item == actor_stat.constitution) {
 				con.add(value, type);
-				fortitude.add(dex.modificator(), bonus.ability);
+				fortitude.add(con.modificator(), bonus.ability);
 			}
 		
 			if (item == actor_stat.intelligence) {

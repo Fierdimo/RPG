@@ -1,4 +1,5 @@
 function finishOldBuffs(){
+	
 	var currentTime = get_timer() - buffTimer;
 	if(currentTime >= 1000000) {
 		var indTimer = 0;
@@ -26,13 +27,11 @@ function finishOldBuffs(){
 		buffTimer = get_timer();
 	}
 	
-	if changed{ 
-	
-		my = create_player(db);
-		
-		my.essemble_equipment(db.gears_db);
-		reBuffActor();
-		walkSpeed = my.stat().walkSpeed;	
-		}
+	//if changed{ 
+	//	my = create_player(db);		
+	//	//my.essemble_equipment(db.gears_db);
+	//	reBuffActor();
+	//	walkSpeed = my.stat().walkSpeed;	
+	//	}
 }
 

@@ -16,7 +16,7 @@ function wait_for_target(){
 //================ IF EXIST ORIGIN POINT FOR AREA DETECTION ========================		
 		if (global.found_origin && is_area_attack) {	
 			
-			global.search_origin = false;
+			//global.search_origin = false;
 			global.cursor = cr_size_all;
 					
 			if variable_struct_exists(pendingAction.data, "area"){

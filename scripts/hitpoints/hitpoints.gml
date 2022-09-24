@@ -10,14 +10,14 @@ function HitPoints() constructor{
 			case bonus.base:
 				base.add(value);
 				break;
-			case TEMP:
+			case bonus.temporal:
 				temporal.add(value);
 				if(maxVal) max_temp.set(maxVal);
 				break;
-			case MARKED:
+			case bonus.marked:
 				marked.add(value);
 				break;
-			case MAX_TEMP:
+			case bonus.maxHP:
 				max_temp.add(value);
 				break;
 			default:

@@ -13,7 +13,7 @@ function Reach() constructor{
 				val.add(value);
 				break;
 				
-			case bonus.temporal:
+			case bonus.circumstance:
 				temp.set(value);
 				break
 			

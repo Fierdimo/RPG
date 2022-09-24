@@ -1,5 +1,9 @@
 function if_action_pushed(action){
 	static pending= [];
+	
+	if(action.escape = 1) {status =  state.bored; return pending}
+	if(action.escape = 2) {status =  state.trying_script; return pending}
+	
 	if(action.pushed){
 		pending = action
 		if(action.require_attack){
