@@ -28,7 +28,7 @@ function equipment_db(_code){
 			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: bonus.marked, },
 			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.charisma}, type: bonus.base, },
 			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.charisma}, type: bonus.marked, },
-			{ skillCode: 9}
+			{ skillCode: 7}
 		]},
 		{
 			code:003,

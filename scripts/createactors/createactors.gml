@@ -7,14 +7,18 @@ function createActors(actor_list_db, actor_instance_array = []){
 				pendingAction: {},
 				myName: actor_list_db[position].name,
 				selected: false,
+				in_range: false,
 				changed: true,
-				uni_sAdd: shader_get_uniform(Shader1, "sAdd"),
+				uni_sAdd: shader_get_uniform(shad_white, "sAdd"),
+				uni_sRed: shader_get_uniform(shad_white, "sRed"),
 				buffTimer: get_timer(),
 				doubleClick: true,
 				distance: 0,
 				status: state.bored,
 			});			
+			
 		with(newActor) buildActor();
+		
 		array_push(actor_instance_array, newActor);				
 	}
 	return actor_instance_array;

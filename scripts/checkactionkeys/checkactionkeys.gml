@@ -11,40 +11,46 @@ function CheckActionKeys() constructor{
 		static last_key = "";
 		
 		if(keyboard_check_pressed(vk_escape)){		
-			if(status != state.casting && status != state.running_script + state.casting){
+			if(status != state.casting){
 				global.doubleClick = false
 				global.search_origin = false;
 				global.found_origin = false;
 				global.shape = SHAPE.none;
 				global.cursor= cr_default;
+				last_key = "";
 				with(all) selected = false;
 				return {escape: 1};
 			}
 		}
 		
 		var index = 0;
-		repeat(array_length(actions)){
+		repeat(array_length(actions)){					
 			
-			if (actions[index].key == last_key){
-				if ((status == state.waiting_for_target or status == state.waiting_for_target + state.casting)&& global.found_origin)
-					return {escape: 2};
-			}
-			
-			last_key = actions[index].key
-			var action_key = keyboard_check(ord(last_key));
-			var _skill = actions[index].skill
+			var action_key = keyboard_check_pressed(ord(actions[index].key));			
 			
 			if (action_key){
+				
+				if (action_key == last_key){					
+					if ((status == state.waiting_for_target or status == state.waiting_for_target + state.casting) && global.in_range){
+						last_key = "";
+						return {escape: 2};
+					}
+				}
+				last_key = action_key;
+				
 				var pending = [];				
-				var command = 0;				
+				var command = 0;	
+				var _skill = actions[index].skill;							
 				var myBuffos = _skill.effect
-				//interrupt if is casting standar or move actions
+				
+				#region //interrupt if is casting standar or move actions
 					if((_skill.data.cast_time == movement.standard || _skill.data.cast_time == movement.move) && status == state.casting){
 						show_debug_message("ERROR: can't cast while casting standard or move action")
 						return  {pushed: false, escape: 0};
 					}
-					global.shape = SHAPE.none
-				//========================================
+				#endregion //========================================
+				
+				global.shape = SHAPE.none
 				repeat(array_length(myBuffos)){
 					if(variable_struct_exists(myBuffos[command], "time")) 
 						myBuffos[command].time.increase = myBuffos[command].time.fixed;					

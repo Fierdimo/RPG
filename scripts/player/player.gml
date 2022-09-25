@@ -264,4 +264,24 @@ function Player() constructor{
 	
 	#endregion
 	
+	#region //accesories
+	
+	function change_vital(stat, value, type){
+		var val = 0;
+		switch(type){
+			case bonus.base:
+				stat += value
+				if (stat < 0) stat = 0;
+				if (stat > hitPoints.base) stat = hitPoints.base;
+				return stat
+			case bonus.temporal:
+				stat += value
+				if (stat < 0) stat = 0;
+				if (stat > hitPoints.temporal) stat = hitPoints.temporal;
+				return stat
+			default:
+				show_debug_message("===================={ NO VALID ATTRIBUTE: "+ string(type) +" }=======================")
+		}
+	}
+	#endregion
 }

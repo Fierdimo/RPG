@@ -5,8 +5,7 @@ db = {
 	
 	name:				"Evil alchemist",
 	
-	hitPoints:			5,
-	hitPointsMarked:	5,
+	hitPoints:			0,
 	hitPointsTemp:		0,
 	
 	armor_class:		10,
@@ -17,7 +16,7 @@ db = {
 	con:			12,
 	int:			10,
 	sab:			10,
-	car:			18,
+	car:			20,
 	
 	fortitude:		0,
 	reflex:			0,

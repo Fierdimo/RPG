@@ -9,10 +9,8 @@
 	
 	#macro EQUIPMENT "EQUIPMENT"
 	#macro BAG "BAG"
+	
 	//HP
-	#macro TEMP "TEMP"
-	#macro MAX_TEMP "MAX_TEMP"
-	#macro MARKED "MARKED"
 	#macro CURE "CURE"
 	#macro DAMAGE "DAMAGE"
 	

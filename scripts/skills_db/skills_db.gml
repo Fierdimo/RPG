@@ -7,10 +7,11 @@ function skills(_code){
 				name:"Harm",	
 				description:[ "Conjuro que quema con la fuerza del mal"],
 				icon: "imagen por montar",
-				area:{shape: SHAPE.LINE, spread: 120},
-				range: RANGE.MEDIUM,
+				area:{shape: SHAPE.LINE, spread: 20},
+				range: RANGE.CLOSE,
 				type: RANGE.RANGED,
 				origin: ORIGIN.TARGET,
+				effect: {on_caster: false, on_ally: true, on_enemy: {type: "undeath", result: "inverse"}}, 
 				school: "NIGROMANCE",
 				level:1,
 				salvation: actor_salvation.will,
@@ -48,7 +49,7 @@ function skills(_code){
 			effect:
 				[
 					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},
-					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},
+					//{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},
 				],	
 		},
 		{

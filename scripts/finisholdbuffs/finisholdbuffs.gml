@@ -14,7 +14,7 @@ function finishOldBuffs(){
 					}
 				}
 				else {
-					myBuffs[indTimer].time --;
+					myBuffs[indTimer].time--;
 					if(myBuffs[indTimer].time.increase <= 0){
 						array_delete(myBuffs, indTimer, 1);
 						changed = true;
@@ -27,11 +27,15 @@ function finishOldBuffs(){
 		buffTimer = get_timer();
 	}
 	
-	//if changed{ 
-	//	my = create_player(db);		
-	//	//my.essemble_equipment(db.gears_db);
-	//	reBuffActor();
-	//	walkSpeed = my.stat().walkSpeed;	
-	//	}
+	if changed{
+		my = create_player(db);		
+		my.essemble_equipment(db.gears_db);
+		
+		for(var i = 0; i < array_length(myBuffs); i++){
+			my.stat(myBuffs[i].target, extractByStat(myBuffs[i].value), myBuffs[i].type);
+		}
+		
+		walkSpeed = my.stat().walkSpeed;	
+	}
 }
 

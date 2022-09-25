@@ -24,7 +24,7 @@ db = {
 	
 	name:				"Fierdimo",
 	
-	hitPoints:			100,
+	hitPoints:			0,
 	hitPointsMarked:	100,
 	hitPointsTemp:		0,
 	
@@ -36,7 +36,7 @@ db = {
 	con:			12,
 	int:			20,
 	sab:			10,
-	car:			18,
+	car:			20,
 	
 	fortitude:		0,
 	reflex:			0,

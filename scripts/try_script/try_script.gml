@@ -4,8 +4,8 @@ function try_script(){
 	if (status == state.trying_script|| status == state.trying_script + state.casting) {
 		
 		 // clear global variables				
-			global.found_origin = false;
-			global.search_origin = false;
+			//global.found_origin = false;
+			//global.search_origin = false;
 			global.cursor = cr_default;
 
 		var not_pass = false;

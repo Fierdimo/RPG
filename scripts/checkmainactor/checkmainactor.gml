@@ -1,15 +1,16 @@
 function checkMainActor(actor){		
 		
 	with(mainPlayer){
-		//show_debug_message(my.stat().strength)
-	
+		
 		pendingAction = if_action_pushed(actionKeys.scan(status));
 		wait_for_target();
 		catch_script(execute, try_script());
+		
 		//TODO: generate Attack of opportunity when casting
 		finishOldBuffs();
 	}
-		
+	#region //Pending code
+//==============================================================================		
 
 			
 	//		var skill_ = processSkillData(action.data)
@@ -27,6 +28,6 @@ function checkMainActor(actor){
 	//			reBuffActor();
 	//		}
 	//	}
-		
+		#endregion
 	
 }

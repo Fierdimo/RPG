@@ -1,8 +1,9 @@
-function detect_targets_by_shape(){
+function detect_targets_by_shape(data){
 	var count_actors = [];
 	var _list = ds_list_create();
 	var ind = 0;
 	
+	#region // funcion accesoria
 	function add_to_array(array, collided){
 		if(collided != -4){
 				if(!is_in_array(array, collided)){
@@ -10,6 +11,7 @@ function detect_targets_by_shape(){
 				}
 		}
 	}
+	#endregion
 
 //	Detecting targets by shape ======================
 			switch(global.shape){
@@ -44,5 +46,8 @@ function detect_targets_by_shape(){
 						break;				
 			}
 	global.shape = SHAPE.none;
+	
+	if(!data.effect.on_caster) { seek_in_array_and_destroy(count_actors, oGame.mainPlayer, false);}	
+	
 	return count_actors
 }

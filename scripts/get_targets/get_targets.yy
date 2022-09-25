@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "GENERAL",
-    "path": "folders/Scripts/GENERAL.yy",
+    "name": "checkActions",
+    "path": "folders/Scripts/checkActions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "extractbystat",
+  "name": "get_targets",
   "tags": [],
   "resourceType": "GMScript",
 }

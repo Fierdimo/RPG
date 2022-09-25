@@ -3,11 +3,7 @@ function create_player(db){
 	_player = new Player();
 	
 	_player.name = db.name; 
-	
-	_player.stat(actor_base.hit_points, db.hitPoints, bonus.base);
-	_player.stat(actor_base.hit_points, db.hitPointsMarked, bonus.marked);
-	_player.stat(actor_base.hit_points, db.hitPointsTemp, bonus.temporal);
-	
+		
 	_player.stat(actor_base.armor_class, db.armor_class, bonus.base);
 	_player.stat(actor_base.size, db.size )
 	

@@ -5,7 +5,7 @@
     "path": "folders/Shaders.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Shader1",
+  "name": "shad_white",
   "tags": [],
   "resourceType": "GMShader",
 }
