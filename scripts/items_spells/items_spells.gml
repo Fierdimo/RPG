@@ -1,5 +1,5 @@
 
-#region //	spells descriptors
+#region 	spells descriptors
 
 enum SHAPE{
 	none,
@@ -55,7 +55,7 @@ enum movement{
 	full_attack,
 }
 #endregion
-#region //	damage types
+#region 	damage types
 enum damage{
 	acid = 0,
 	axiomatic = 1,
@@ -71,7 +71,7 @@ enum damage{
 	slashing = 11,
 }
 #endregion
-#region //	bonus types
+#region 	bonus types
 enum bonus{
 	untyped,
 	ability,
@@ -98,4 +98,11 @@ enum bonus{
 	marked,
 	maxHP
 }
+#endregion
+#region   attack descriptors
+	enum attack{
+	sucess,
+	fail,
+	critical
+	}
 #endregion

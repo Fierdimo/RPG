@@ -1,7 +1,7 @@
 function equipment_db(_code){
 	data = [{
 		code:001,
-		slot: GEAR.soul,
+		slot: slot.soul,
 		name: "Adventurer Soul",
 		description: "1er nivel",
 		experience_conditions:{value: 0},
@@ -11,13 +11,14 @@ function equipment_db(_code){
 			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: bonus.base, },
 			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: bonus.marked, },
 			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.constitution}, type: bonus.base, },
-			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.constitution}, type: bonus.marked, },
+			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.constitution}, type: bonus.marked, },	
+			{ target: actor_salvation.will, value:{magnitude: "STATIC_VALUE", increase: 4}, type: bonus.resistance, },
 			{ skillCode: 7}
 		]},
 		
 		{
 		code:002,
-		slot: GEAR.soul,
+		slot: slot.soul,
 		name: "Adventurer Soul",
 		description: "2do nivel",
 		experience_conditions:{},
@@ -32,7 +33,7 @@ function equipment_db(_code){
 		]},
 		{
 			code:003,
-			slot: GEAR.arms,
+			slot: slot.arms,
 			name: "power ring",
 			description: "1er circulo",
 			experience_conditions:{},
@@ -40,13 +41,14 @@ function equipment_db(_code){
 		},
 		{
 		code:004,
-		slot: GEAR.weapons,
+		slot: slot.weapons,
 		name: "Garrote",
 		description: "Básicamente, un palo",
 		experience_conditions:{},
 		effect: [
-			{target: actor_base.reach, value: {magnitude: 1, increase: 5}, type: bonus.base},
 			{ skillCode: 9},
+			{target: actor_base.reach, value: {magnitude: 1, increase: 5}, type: bonus.base},
+			{target: actor_base.attack, value:{magnitude: 1, increase: actor_stat.strength}, type: bonus.enhancement}
 		]},
 	]
 	

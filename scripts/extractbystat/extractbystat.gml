@@ -20,6 +20,12 @@ function extractByStat(value, fixed = false, inConstructor = false){
 					return statement.wisdom.modificator * value.magnitude;
 				case actor_stat.charisma:
 					return statement.charisma.modificator * value.magnitude;
+				case actor_salvation.fortitude:
+					return statement.fortitude * value.magnitude;
+				case actor_salvation.reflex:
+					return statement.reflex * value.magnitude;
+				case actor_salvation.will:
+					return statement.will * value.magnitude;
 				default:
 					return 0;
 			}

@@ -6,7 +6,7 @@
     "path": "folders/Scripts/GENERAL/CONSTANTS.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PLAYER_STATS",
+  "name": "player_stats",
   "tags": [],
   "resourceType": "GMScript",
 }

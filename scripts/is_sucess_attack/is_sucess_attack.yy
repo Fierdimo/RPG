@@ -6,7 +6,7 @@
     "path": "folders/Scripts/checkActions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "is_success_attack",
+  "name": "is_sucess_attack",
   "tags": [],
   "resourceType": "GMScript",
 }

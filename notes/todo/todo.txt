@@ -1,7 +1,7 @@
 TODO::  >>>>>>>>>>> sprite_index  <<<<<<<<<<<<
 
+--- 3. verificar CA/Salvacion
 
-CREAR UN BUFF UNIVERSAL DONDE SE ALMACENEN LAS ESTADISTICAS DE HitPoints
 SIstema de ataque
 
 		---------------->  Gear System
@@ -26,7 +26,7 @@ SIstema de ataque
 		---------> implementar pausas por acciones
 				------------no se puede mover mientras ataca[PENDING] o castea[DONE]
 
-	--- 3. verificar CA/Salvacion
+	
 	--- 4. ataques de area
 	----------> Seleccion de areas [Burst, Square, Line, Cone] DONE
 	

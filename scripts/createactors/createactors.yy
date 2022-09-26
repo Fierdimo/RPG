@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Controls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "createActors",
+  "name": "createactors",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -14,12 +14,11 @@ function skills(_code){
 				effect: {on_caster: true, on_ally: true, on_enemy: {type: "undeath", result: "inverse"}}, 
 				school: "NIGROMANCE",
 				level:1,
-				salvation: actor_salvation.will,
 				harmless: false,
 				save: take_effect.half,
 				cast_time: movement.standard,
 				},
-			require_attack: true,
+			require_attack: {target: actor_base.armor_class, CD: 15},
 			
 			effect:
 				[
@@ -47,7 +46,7 @@ function skills(_code){
 				cast_time: movement.standard,
 			},
 			
-			require_attack: true,
+			require_attack: {target: actor_salvation.will, CD: 15},
 			effect:
 				[
 					{target: actor_base.temporal_hitpoints, value:{magnitude: STATIC_VALUE, increase: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},					
@@ -64,7 +63,7 @@ function skills(_code){
 				fail: take_effect.full,
 				cast_time: movement.standard,
 			},
-			require_attack: true,
+			require_attack: {target: actor_base.armor_class, CD: 15},
 			effect:
 				[
 					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: -10}, type: damage.bludgeoning},

@@ -7,9 +7,12 @@ enum actor_base{
 	hit_points,
 	temporal_hitpoints,
 	armor_class,	
+	armor_touch,
+	armor_flatfooted,
 	damage_reduction,
 	damage,
 	heal,
+	attack,
 	tail,
 }
 enum actor_stat{
@@ -60,7 +63,7 @@ enum spd{
 }
 #endregion
 #region //ITEMS
-enum GEAR{
+enum slot{
 weapons,
 head,
 shoulders,

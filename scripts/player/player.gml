@@ -14,6 +14,7 @@ function Player() constructor{
 	armorClass = new ArmorClass();
 	mySize = new basicStat();
 	myReach = new Reach();
+	myAttack = new BaseStat();
 		 #endregion		 
 	#region //Saves
 	fortitude = new BaseStat();
@@ -73,6 +74,8 @@ function Player() constructor{
 			if(item == actor_base.hit_points)						hitPoints.add(value, type);		
 			if(item == actor_base.temporal_hitpoints)		hitPoints.add(value, type);	
 			if(item == actor_base.armor_class)					armorClass.add(value, type);
+			if(item == actor_base.attack)								myAttack.add(value, type);
+		#endregion
 		#endregion
 		#region  // STATS			 
 			if (item == actor_stat.strength) {
@@ -87,11 +90,11 @@ function Player() constructor{
 				reflex.add(dex.modificator(), bonus.ability);
 				armorClass.add(dex.modificator(), bonus.ability);
 			
-				acrobatics.add(str.modificator(), bonus.ability);
-				disableDevice.add(str.modificator(), bonus.ability);
-				escape.add(str.modificator(), bonus.ability);
-				lightWeapons.add(str.modificator(), bonus.ability);
-				stealth.add(str.modificator(), bonus.ability);
+				acrobatics.add(dex.modificator(), bonus.ability);
+				disableDevice.add(dex.modificator(), bonus.ability);
+				escape.add(dex.modificator(), bonus.ability);
+				lightWeapons.add(dex.modificator(), bonus.ability);
+				stealth.add(dex.modificator(), bonus.ability);
 			
 				moveSpeed.add(((dex.total()-10)/100));
 			}
@@ -103,29 +106,29 @@ function Player() constructor{
 		
 			if (item == actor_stat.intelligence) {
 				int.add(value, type);
-				alchemy.add(str.modificator(), bonus.ability);
-				appraise.add(str.modificator(), bonus.ability);
-				spellCraft.add(str.modificator(), bonus.ability);
-				taylor.add(str.modificator(), bonus.ability);
+				alchemy.add(int.modificator(), bonus.ability);
+				appraise.add(int.modificator(), bonus.ability);
+				spellCraft.add(int.modificator(), bonus.ability);
+				taylor.add(int.modificator(), bonus.ability);
 			
 				standardActionSpeed.add(((int.total()-10)/100), bonus.ability);
 			}
 		
 			if (item == actor_stat.wisdom){
 				wis.add(value, type);
-				will.add(dex.modificator(), bonus.ability);
+				will.add(wis.modificator(), bonus.ability);
 			
-				heal.add(str.modificator(), bonus.ability);
+				heal.add(wis.modificator(), bonus.ability);
 				perception.add(wis.modificator(), bonus.ability);
-				senseMotive.add(str.modificator(), bonus.ability);
-				survival.add(str.modificator(), bonus.ability);
+				senseMotive.add(wis.modificator(), bonus.ability);
+				survival.add(wis.modificator(), bonus.ability);
 			}
 		
 			if (item == actor_stat.charisma) {
 				cha.add(value, type);	
-				bluff.add(str.modificator(), bonus.ability);
-				diplomacy.add(str.modificator(), bonus.ability);
-				intimidate.add(str.modificator(), bonus.ability);
+				bluff.add(cha.modificator(), bonus.ability);
+				diplomacy.add(cha.modificator(), bonus.ability);
+				intimidate.add(cha.modificator(), bonus.ability);
 			}
 		#endregion
 		#region  // SAVES
@@ -172,6 +175,7 @@ function Player() constructor{
 					flat_footed:	armorClass.flatFooted(),
 					},
 				reach:			myReach.get(),
+				attack:			myAttack.total(),
 			#endregion
 			#region  // STATS	
 				strength:			{ total: str.total(), modificator: str.modificator()},
@@ -224,7 +228,7 @@ function Player() constructor{
 	function essemble_equipment(db_gears){
 		var equipments = [weapons, head, shoulders, torso, arms, hands, rings, foot, soul, bag,];
 	
-		for(var slot = 0; slot < GEAR.tail; slot ++){
+		for(var slot = 0; slot < slot.tail; slot ++){
 			for(var item = 0; item < array_length(db_gears[slot].content);item++){	
 				
 					var newItem = equipment_db(db_gears[slot].content[item].code);

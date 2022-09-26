@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"createActors","path":"scripts/createActors/createActors.yy",},"order":6,},
+    {"id":{"name":"createactors","path":"scripts/createactors/createactors.yy",},"order":6,},
     {"id":{"name":"icn_cross_swords","path":"sprites/icn_cross_swords/icn_cross_swords.yy",},"order":5,},
     {"id":{"name":"checkMainActor","path":"scripts/checkMainActor/checkMainActor.yy",},"order":2,},
     {"id":{"name":"checkDoubleClick","path":"scripts/checkDoubleClick/checkDoubleClick.yy",},"order":7,},
@@ -10,7 +10,7 @@
     {"id":{"name":"Animate","path":"scripts/Animate/Animate.yy",},"order":0,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"is_in_array","path":"scripts/is_in_array/is_in_array.yy",},"order":8,},
-    {"id":{"name":"is_success_attack","path":"scripts/is_success_attack/is_success_attack.yy",},"order":10,},
+    {"id":{"name":"is_sucess_attack","path":"scripts/is_sucess_attack/is_sucess_attack.yy",},"order":10,},
     {"id":{"name":"buttons_dnd","path":"scripts/buttons_dnd/buttons_dnd.yy",},"order":10,},
     {"id":{"name":"managebuffs","path":"scripts/managebuffs/managebuffs.yy",},"order":0,},
     {"id":{"name":"btn_green_live","path":"sprites/btn_green_live/btn_green_live.yy",},"order":8,},
@@ -35,7 +35,7 @@
     {"id":{"name":"btn_gray","path":"sprites/btn_gray/btn_gray.yy",},"order":4,},
     {"id":{"name":"catch_script","path":"scripts/catch_script/catch_script.yy",},"order":3,},
     {"id":{"name":"skills_db","path":"scripts/skills_db/skills_db.yy",},"order":2,},
-    {"id":{"name":"PLAYER_STATS","path":"scripts/PLAYER_STATS/PLAYER_STATS.yy",},"order":0,},
+    {"id":{"name":"player_stats","path":"scripts/player_stats/player_stats.yy",},"order":0,},
     {"id":{"name":"alchemist","path":"sprites/alchemist/alchemist.yy",},"order":1,},
     {"id":{"name":"small","path":"fonts/small/small.yy",},"order":0,},
     {"id":{"name":"detect_targets_by_shape","path":"scripts/detect_targets_by_shape/detect_targets_by_shape.yy",},"order":8,},
