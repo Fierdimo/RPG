@@ -11,19 +11,19 @@ function skills(_code){
 				range: RANGE.CLOSE,
 				type: RANGE.RANGED,
 				origin: ORIGIN.TARGET,
-				effect: {on_caster: false, on_ally: true, on_enemy: {type: "undeath", result: "inverse"}}, 
+				effect: {on_caster: true, on_ally: true, on_enemy: {type: "undeath", result: "inverse"}}, 
 				school: "NIGROMANCE",
 				level:1,
 				salvation: actor_salvation.will,
 				harmless: false,
-				fail: take_damage.half,
+				save: take_effect.half,
 				cast_time: movement.standard,
 				},
 			require_attack: true,
 			
 			effect:
 				[
-					{target: DAMAGE, value:{magnitude: STATIC_VALUE, increase: 15}, type: bonus.profane},
+					{target: actor_base.damage, value:{magnitude: STATIC_VALUE, increase: 15}, type: bonus.profane},
 				],
 						
 		},
@@ -32,15 +32,17 @@ function skills(_code){
 			data: {
 				name:"FALSE LIFE",
 				description:[ "Muerto pero vivo"],
-				icon: "imagen por montar",
+				icon: "imagen por montar",				
+				targets: {magnitude: STATIC_VALUE, increase: 1},
 				range: RANGE.CLOSE,
 				type: RANGE.RANGED,
 				origin: ORIGIN.TARGET,
+				effect: {on_caster: true,}, 
 				school: "NIGROMANCE",
 				level:1,
 				salvation: actor_salvation.will,
 				harmless: true,
-				fail: take_damage.negate,
+				save: take_effect.negate,
 				target: point.cursor,
 				cast_time: movement.standard,
 			},
@@ -48,8 +50,7 @@ function skills(_code){
 			require_attack: true,
 			effect:
 				[
-					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},
-					//{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: 10, fixed: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},
+					{target: actor_base.temporal_hitpoints, value:{magnitude: STATIC_VALUE, increase: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},					
 				],	
 		},
 		{
@@ -60,7 +61,7 @@ function skills(_code){
 				icon: "imagen por montar",
 				range: RANGE.MELEE,
 				origin: ORIGIN.FRONT,
-				fail: take_damage.full,
+				fail: take_effect.full,
 				cast_time: movement.standard,
 			},
 			require_attack: true,

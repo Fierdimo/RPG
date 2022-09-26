@@ -1,3 +1,7 @@
+///@param {Struct} data <struct that must contain level & range>
+///@param {Struct} target <[OPTIONAL] by default: cursor position>
+///@param {Struct} origin < [OPTIONAL] by default: mainPlayer>
+///@return {Bool} < in attack range or not>
 function get_range(data, target = "CURSOR", origin = oGame.mainPlayer){
 	if(target == "CURSOR")
 			var distance = transform_size_to(size.foot, point_distance(origin.x, origin.y, mouse_x, mouse_y));

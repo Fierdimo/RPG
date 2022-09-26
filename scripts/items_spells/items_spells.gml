@@ -37,10 +37,13 @@ enum point{
 	equiped,
 }
 
-enum take_damage{
+enum take_effect{
 	negate,
 	half,
-	full
+	full,
+	damage,
+	heal,
+	temporal_hitpoints
 }
 
 enum movement{

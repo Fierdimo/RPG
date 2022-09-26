@@ -15,6 +15,8 @@ function createActors(actor_list_db, actor_instance_array = []){
 				doubleClick: true,
 				distance: 0,
 				status: state.bored,
+				myRelativeHP: 0,
+				myRelativeHPTemp: 0,
 			});			
 			
 		with(newActor) buildActor();

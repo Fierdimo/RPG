@@ -9,7 +9,7 @@ function HitPoints() constructor{
 				base.add(value);
 				break;
 			case bonus.temporal:
-				temporal.add(value);
+				temporal.set(value);
 				break;
 			default:
 				break;

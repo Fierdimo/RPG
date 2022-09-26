@@ -54,8 +54,7 @@ function CheckActionKeys() constructor{
 				repeat(array_length(myBuffos)){
 					if(variable_struct_exists(myBuffos[command], "time")) 
 						myBuffos[command].time.increase = myBuffos[command].time.fixed;					
-;					if(myBuffos[command].type == bonus.temporal ) 
-						myBuffos[command].value.increase = myBuffos[command].value.fixed;
+;					
 						
 					array_push(pending, myBuffos[command++]);					
 				}

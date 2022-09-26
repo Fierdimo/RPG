@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "non_actives",
-    "path": "folders/Scripts/checkActions/non_actives.yy",
+    "name": "Controls",
+    "path": "folders/Scripts/Controls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "changehitpoints",
+  "name": "managebuffs",
   "tags": [],
   "resourceType": "GMScript",
 }

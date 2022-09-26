@@ -62,16 +62,17 @@ function Player() constructor{
 	#endregion
 	
 	#region // Stats functions
-	function stat(item = bonus.untyped, value = 0, type = bonus.untyped, maxVal = 0){
+	function stat(item = bonus.untyped, value = 0, type = bonus.untyped){
 		
 		#region  //BASES
 			if(item == actor_base.size) {
 				mySize.set(value);
 				myReach.add(transform_size_to(size.reach, value), bonus.natural);
 			}
-			if(item == actor_base.reach)				myReach.add(value, type);
-			if(item == actor_base.hit_points)		hitPoints.add(value, type, maxVal);		
-			if(item == actor_base.armor_class)	armorClass.add(value, type);
+			if(item == actor_base.reach)								myReach.add(value, type);
+			if(item == actor_base.hit_points)						hitPoints.add(value, type);		
+			if(item == actor_base.temporal_hitpoints)		hitPoints.add(value, type);	
+			if(item == actor_base.armor_class)					armorClass.add(value, type);
 		#endregion
 		#region  // STATS			 
 			if (item == actor_stat.strength) {
@@ -267,18 +268,15 @@ function Player() constructor{
 	#region //accesories
 	
 	function change_vital(stat, value, type){
-		var val = 0;
 		switch(type){
 			case bonus.base:
 				stat += value
 				if (stat < 0) stat = 0;
-				if (stat > hitPoints.base) stat = hitPoints.base;
-				return stat
+				return min(stat, hitPoints.base.get())
 			case bonus.temporal:
-				stat += value
+				stat += value;
 				if (stat < 0) stat = 0;
-				if (stat > hitPoints.temporal) stat = hitPoints.temporal;
-				return stat
+				return min(stat, hitPoints.temporal.get())
 			default:
 				show_debug_message("===================={ NO VALID ATTRIBUTE: "+ string(type) +" }=======================")
 		}

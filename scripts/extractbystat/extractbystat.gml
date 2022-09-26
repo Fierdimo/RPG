@@ -1,5 +1,4 @@
 function extractByStat(value, fixed = false, inConstructor = false){
-	
 	var eval = value.increase;
 	if(fixed)eval = value.fixed;
 	

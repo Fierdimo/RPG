@@ -9,9 +9,9 @@ var indx = 0;
 while(indx < array_length(Actors)){
 	draw_set_color(c_white);
 	with(Actors[indx]){
-		if(myHP == my.stat().HP.base) draw_text(x,y-15, "FULL")
-		if(myHP <= 0) draw_text(x,y-15, "DeatH")
-		if(myHP > 0 && myHP < my.stat().HP.base) draw_text(x,y-15, string(myHP)+"+"+string(myTempHP))
+		//if(myHP == my.stat().HP.base) draw_text(x,y-15, "FULL")
+		if(myHP <= 0) draw_text(x,y-15, "DeAtH")
+		if(myHP > 0) draw_text(x,y-15, string(myHP)+"+"+string(myTempHP))
 		
 		draw_healthbar(x-8,y-10,x+8,y-12,myRelativeHP,c_white, c_black, c_green,0,true,true);
 		draw_healthbar(x-8,y-13,x+8,y-15,myRelativeHPTemp,c_white, c_navy, c_red,0,true,true);

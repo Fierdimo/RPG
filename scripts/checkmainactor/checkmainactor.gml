@@ -7,8 +7,11 @@ function checkMainActor(actor){
 		catch_script(execute, try_script());
 		
 		//TODO: generate Attack of opportunity when casting
-		finishOldBuffs();
+		;
 	}
+	
+	manageBuffs()
+	
 	#region //Pending code
 //==============================================================================		
 

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "non_actives",
-    "path": "folders/Scripts/checkActions/non_actives.yy",
+    "name": "checkActions",
+    "path": "folders/Scripts/checkActions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "checkTmp",
+  "name": "do_damage",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -5,8 +5,11 @@ enum actor_base{
 	size = 1,
 	reach,		
 	hit_points,
+	temporal_hitpoints,
 	armor_class,	
 	damage_reduction,
+	damage,
+	heal,
 	tail,
 }
 enum actor_stat{
