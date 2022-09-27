@@ -1,14 +1,18 @@
 function execute(script_, _id){
 	
 	#region  Get [targets]
+		var targets = []
 		if variable_struct_exists(script_.data, "area")
-			var targets = detect_targets_by_shape(script_.data);
+			targets = detect_targets_by_shape(script_.data);
 		else{
 			targets = get_targets(script_.data)
 		}
 		#endregion
 		
 		if (array_length(targets) > 0) {
+			#region mainPlayer to target
+				_id.direction = round(point_direction(_id.x, _id.y, targets[0].x, targets[0].y)/90);
+			#endregion
 			
 			#region Target limit=10000
 			var max_targets;
@@ -17,7 +21,8 @@ function execute(script_, _id){
 				else max_targets = 10000;
 			}
 			#endregion
-			#region  Run for each target, until max targets in script
+			
+			#region Run for each target, until max targets in script
 				for(var pointed = 0; pointed < min(array_length(targets), max_targets); pointed++){
 					
 					var multiplier = 1;
@@ -44,8 +49,7 @@ function execute(script_, _id){
 						#region run for each instruction object
 						for(var index = 0; index < array_length(script_.pending); index++){
 						
-								var deployment = script_.pending[index];												
-								show_debug_message(deployment)											
+								var deployment = script_.pending[index];																					
 							
 									//if instruction_required_Attack then 
 									//		if not is_sucess_attack then 
@@ -53,7 +57,7 @@ function execute(script_, _id){
 									#region change vitals or put Buff on-air
 									switch(deployment.target ) {
 										case actor_base.damage:
-											myHP = my.change_vital(myHP, do_damage(deployment, id, multiplier), bonus.base)										
+											myHP = my.change_vital(myHP, do_damage(deployment, _id, multiplier, ), bonus.base)		
 											break;
 										case actor_base.heal:
 											myHP =(my.change_vital(myHP, floor(extractByStat(deployment.value)* multiplier), bonus.base) );

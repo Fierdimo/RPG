@@ -52,7 +52,7 @@ enum movement{
 	inmediate,
 	move,
 	standard,
-	full_attack,
+	attack,
 }
 #endregion
 #region 	damage types

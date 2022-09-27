@@ -1,9 +1,7 @@
-function do_damage(deployment, origin, multiplier = 1){
+function do_damage(deployment, source, multiplier = 1){
 		
 		var subSearch = 0;
-		var myBuffs = origin.myBuffs;
-		var change =  floor(extractByStat(deployment.value));
-		
+		with (source) var change =  floor(extractByStat(deployment.value));
 		
 			while(subSearch < array_length(myBuffs) ){
 				
@@ -19,11 +17,11 @@ function do_damage(deployment, origin, multiplier = 1){
 				change = floor(change*multiplier);
 					
 					//check temp hp
-				if (change >= origin.myTempHP){
-					change -= origin.myTempHP; 
-					origin.myTempHP = 0;					
+				if (change >= myTempHP){
+					change -= myTempHP; 
+					myTempHP = 0;					
 				}else{
-					origin.myTempHP -=change;
+					myTempHP -=change;
 					change = 0;
 				}
 						

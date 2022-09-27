@@ -233,12 +233,14 @@ function Player() constructor{
 	
 		for(var slot = 0; slot < slot.tail; slot ++){
 			for(var item = 0; item < array_length(db_gears[slot].content);item++){	
-				
-					var newItem = equipment_db(db_gears[slot].content[item].code);
-				
-					if(newItem.code != -1) replace_playerOptions(newItem, db_gears[slot].content[item]); // reemplazar valores 
-					else continue; // Item does't exist in DB
-				
+					
+					var newItem = noone;
+					
+					if (variable_struct_exists(db_gears[slot].content[item], "code")){
+						newItem = equipment_db(db_gears[slot].content[item].code);				
+						if(newItem.code) replace_playerOptions(newItem, db_gears[slot].content[item]); // reemplazar valores				
+					}
+					
 					equipments[slot].add(newItem); // Save in structure
 					
 			}
@@ -250,16 +252,19 @@ function Player() constructor{
 	
 		for (var type = 0; type < array_length(equipments); type++){
 			for(var slot = 0; slot < array_length(equipments[type].show()); slot++){
-			
+				
 				var equip = equipments[type].show()[slot];
-				for(var effect_n = 0; effect_n < array_length(equip.effect); effect_n ++){
-						effect = equip.effect[effect_n];
+				
+				if(equip){					
+					for(var effect_n = 0; effect_n < array_length(equip.effect); effect_n ++){
+							effect = equip.effect[effect_n];
 						
-						if(variable_struct_exists(effect, "skillCode")){
-								if(effect.key != "") 
-									actionKeys.add(effect.key, skills(effect.skillCode));
-						}
-						else	 array_push(myBuffs, effect)
+							if(variable_struct_exists(effect, "skillCode")){
+									if(effect.key != "") 
+										actionKeys.add(effect.key, skills(effect.skillCode));
+							}
+							else	 array_push(myBuffs, effect)
+					}
 				}
 			}
 		}

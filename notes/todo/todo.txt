@@ -1,6 +1,6 @@
-TODO::  >>>>>>>>>>> sprite_index  <<<<<<<<<<<<
+ >>>>>>>>>>> sprite_index  <<<<<<<<<<<<
 
-
+TODO:  SHOW FINISHED BUFFS
 
 SIstema de ataque
 

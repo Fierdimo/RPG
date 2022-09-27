@@ -72,7 +72,8 @@ db = {
 	runMultiplicator:			4, 
 
 	gears_db: [
-		{
+	
+		{//weapons
 			maxiimum : 2,
 			content: [
 				{
@@ -80,29 +81,30 @@ db = {
 					playerDefined: ["C"], 
 					experience: 0				
 				},
+				{}
 			]
 		},				
-		{
+		{//head
 			maxiimum : 1,
-			content: []
+			content: [{}]
 		},
-		{
+		{//shoulders
 			maxiimum : 1,
-			content: []
+			content: [{}]
 		},		
-		{
+		{//torso
 			maxiimum : 1,
-			content: []
+			content: [{}]
 		},		
-		{
+		{//arms
 			maxiimum : 1,
-			content: []
+			content: [{}]
 		},
-		{
+		{//hands
 			maxiimum : 1,
-			content: []
+			content: [{}]
 		},
-		{
+		{//rings
 			maxiimum : 1,
 			content: [
 			{
@@ -110,13 +112,14 @@ db = {
 				playerDefined: ["A"], 
 				experience: 0				
 			},
+			{}
 			]
 		},
-		{
+		{//foot
 			maxiimum : 1,
-			content: []
+			content: [{}]
 		},
-		{
+		{//soul
 			maxiimum : 1,
 			content: [
 				{
@@ -125,7 +128,7 @@ db = {
 					experience: 0				
 				},]
 		},		
-		{
+		{//bag
 			maxiimum : 12,
 			content: [
 				{
@@ -153,6 +156,7 @@ db = {
 					playerDefined: [6,0,10,10,0,0,"C"], 
 					experience: 0				
 				},
+				{},{},{},{},{},{},{}
 				
 			]
 		},

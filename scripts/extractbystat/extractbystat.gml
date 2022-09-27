@@ -7,7 +7,7 @@ function extractByStat(value, fixed = false, inConstructor = false){
 	
 		if(value.magnitude == STATIC_VALUE) return eval;
 		else{
-			if (eval > actor_ability.tail || eval < actor_stat.strength) return 0;			
+			if (eval > actor_ability.tail || eval < actor_stat.strength) { return 0;}			
 		#region //statement list			
 			var stat_list =[
 						statement.strength.modificator,

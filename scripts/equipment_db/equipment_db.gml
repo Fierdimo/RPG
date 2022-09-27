@@ -45,7 +45,7 @@ function equipment_db(_code){
 		name: "Garrote",
 		description: "Básicamente, un palo grande",
 		experience_conditions:{},
-		critical: {range : 1, multiplier: 2},
+		critical: {range : 0, multiplier: 2},
 		effect: [
 			{ skillCode: 9},
 			{target: actor_base.reach, value: {magnitude: 1, increase: 5}, type: bonus.base},
@@ -58,5 +58,5 @@ function equipment_db(_code){
 		if(data[index].code == _code) return data[index];
 		index++;
 	}
-	return {code: -1}
+	return {code: noone}
 }

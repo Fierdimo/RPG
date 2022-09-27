@@ -7,10 +7,10 @@ function skills(_code){
 				name:"Harm",	
 				description:[ "Conjuro que quema con la fuerza del mal"],
 				icon: "imagen por montar",
-				area:{shape: SHAPE.LINE, spread: 20},
-				range: RANGE.CLOSE,
+				area:{shape: SHAPE.BURST, spread: {magnitude: STATIC_VALUE, increase: 30}},
+				range: RANGE.UNLIMITED,
 				type: RANGE.RANGED,
-				origin: ORIGIN.TARGET,
+				origin: ORIGIN.SELF,
 				effect: {on_caster: true, on_ally: true, on_enemy: {type: "undeath", result: "inverse"}}, 
 				school: "NIGROMANCE",
 				level:1,
@@ -58,24 +58,25 @@ function skills(_code){
 				name:"Swing",
 				description:[ "Ataca con toda la fuerza disponible"],
 				icon: "imagen por montar",
-				range: RANGE.MELEE,
+				area:{shape: SHAPE.BURST, spread: {magnitude: STATIC_VALUE, increase: actor_base.reach}},
+				targets: {magnitude: STATIC_VALUE, increase: 1},
+				range: RANGE.UNLIMITED,
+				type: RANGE.MELEE,
 				origin: ORIGIN.FRONT,
-				fail: take_effect.full,
+				effect: {on_caster: false,}, 
 				cast_time: movement.standard,
 				sucess: take_effect.negate,
 			},
 			require_attack: {target: actor_base.armor_class, CD: 15},
 			effect:
 				[
-					{target: actor_base.hit_points, value:{magnitude: STATIC_VALUE, increase: -10}, type: damage.bludgeoning},
+					{target: actor_base.damage, value:{magnitude: STATIC_VALUE, increase: 10}, type: damage.bludgeoning},
+					{target: actor_base.damage, value:{magnitude: 1, increase: actor_stat.strength}, type: damage.bludgeoning},
 				],
 		},
-	
-	
-	
 	]
 	
-	index = 0;
+	var index = 0;
 	repeat(array_length(data)){
 		if(data[index].code == _code) return data[index];
 		index++;
