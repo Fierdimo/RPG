@@ -7,27 +7,39 @@ function extractByStat(value, fixed = false, inConstructor = false){
 	
 		if(value.magnitude == STATIC_VALUE) return eval;
 		else{
-			switch(eval){
-				case actor_stat.strength:
-					return statement.strength.modificator * value.magnitude;
-				case actor_stat.dexterity:
-					return statement.dexterity.modificator * value.magnitude;
-				case actor_stat.constitution:
-					return statement.constitution.modificator * value.magnitude;
-				case actor_stat.intelligence:
-					return statement.intelligence.modificator * value.magnitude;
-				case actor_stat.wisdom:
-					return statement.wisdom.modificator * value.magnitude;
-				case actor_stat.charisma:
-					return statement.charisma.modificator * value.magnitude;
-				case actor_salvation.fortitude:
-					return statement.fortitude * value.magnitude;
-				case actor_salvation.reflex:
-					return statement.reflex * value.magnitude;
-				case actor_salvation.will:
-					return statement.will * value.magnitude;
-				default:
-					return 0;
-			}
+			if (eval > actor_ability.tail || eval < actor_stat.strength) return 0;			
+		#region //statement list			
+			var stat_list =[
+						statement.strength.modificator,
+						statement.dexterity.modificator,
+						statement.constitution.modificator,
+						statement.intelligence.modificator,
+						statement.wisdom.modificator,
+						statement.charisma.modificator,
+						statement.fortitude,
+						statement.reflex,
+						statement.will,
+						statement.acrobatics,
+						statement.alchemy,
+						statement.armors,
+						statement.appraise,
+						statement.bluff,
+						statement.climb,
+						statement.diplomacy,
+						statement.disable_device,
+						statement.escape,
+						statement.heal,
+						statement.heavy_weapons,
+						statement.intimidate,
+						statement.light_weapons,
+						statement.perception,
+						statement.sense_motive,
+						statement.spellcraft,
+						statement.stealth,
+						statement.survival,
+						statement.taylor,
+					]
+			#endregion
+			return stat_list[eval - actor_stat.strength] * value.magnitude;
 		}
 }

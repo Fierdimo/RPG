@@ -15,7 +15,7 @@ function skills(_code){
 				school: "NIGROMANCE",
 				level:1,
 				harmless: false,
-				save: take_effect.half,
+				sucess: take_effect.half,
 				cast_time: movement.standard,
 				},
 			require_attack: {target: actor_base.armor_class, CD: 15},
@@ -39,14 +39,14 @@ function skills(_code){
 				effect: {on_caster: true,}, 
 				school: "NIGROMANCE",
 				level:1,
-				salvation: actor_salvation.will,
+				salvation: save.will,
+				sucess: take_effect.negate,
 				harmless: true,
-				save: take_effect.negate,
 				target: point.cursor,
 				cast_time: movement.standard,
 			},
 			
-			require_attack: {target: actor_salvation.will, CD: 15},
+			require_attack: {target: save.will, CD: 15},
 			effect:
 				[
 					{target: actor_base.temporal_hitpoints, value:{magnitude: STATIC_VALUE, increase: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},					
@@ -62,6 +62,7 @@ function skills(_code){
 				origin: ORIGIN.FRONT,
 				fail: take_effect.full,
 				cast_time: movement.standard,
+				sucess: take_effect.negate,
 			},
 			require_attack: {target: actor_base.armor_class, CD: 15},
 			effect:

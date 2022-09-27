@@ -1,6 +1,6 @@
 TODO::  >>>>>>>>>>> sprite_index  <<<<<<<<<<<<
 
---- 3. verificar CA/Salvacion
+
 
 SIstema de ataque
 
@@ -10,26 +10,29 @@ SIstema de ataque
 							-Equiped
 							-Bag
 					2. run equips on player DONE		
-					3. swap betwen equip and bag DOING...
+			
 						
 	======================================================================
 
 	--- 2. sistema de target 
-		---------->implementar equipos y estadisticas de ataque DOING ****
+		---------->implementar equipos y estadisticas de ataque DONE
 		----------> FLAG de seleccion	>>>>			DONE
 		----------> FLAG <cuerpo a cuerpo> y <a distancia> DOING
-				---------> rango de armas
-		----------> aliado vs enemigo
+				---------> rango de armas DONE
+		----------> aliado vs enemigo 
 		
-					
+		
 				
 		---------> implementar pausas por acciones
 				------------no se puede mover mientras ataca[PENDING] o castea[DONE]
 
-	
-	--- 4. ataques de area
+	--- 3. verificar CA/Salvacion DONE
+	--- 4. ataques de area DONE
 	----------> Seleccion de areas [Burst, Square, Line, Cone] DONE
 	
+	
+	GUI
+			====== > swap betwen equip and bag DOING...
 	
 	=====================================================
 	draw triangle

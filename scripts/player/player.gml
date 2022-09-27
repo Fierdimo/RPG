@@ -1,68 +1,69 @@
 function Player() constructor{
-		
-	#region //Stats
-	str = new Ability();
-	dex = new Ability();
-	con = new Ability();
-	int = new Ability();
-	wis = new Ability();
-	cha = new Ability();
-	#endregion
-	#region //Basics
-	name = "";
-	hitPoints = new HitPoints();
-	armorClass = new ArmorClass();
-	mySize = new basicStat();
-	myReach = new Reach();
-	myAttack = new BaseStat();
-		 #endregion		 
-	#region //Saves
-	fortitude = new BaseStat();
-	reflex = new BaseStat();
-	will = new BaseStat();
-	#endregion
-	#region //Skills
-	acrobatics = new BaseStat();
-	alchemy = new BaseStat();
-	armors = new BaseStat();
-	appraise = new BaseStat();
-	bluff = new BaseStat();
-	climb = new BaseStat();
-	diplomacy = new BaseStat();
-	disableDevice = new BaseStat();
-	escape = new BaseStat();
-	heal = new BaseStat();
-	heavyWeapons = new BaseStat();
-	intimidate = new BaseStat();
-	lightWeapons = new BaseStat();
-	perception = new BaseStat();
-	senseMotive = new BaseStat();
-	spellCraft = new BaseStat();
-	stealth = new BaseStat();
-	survival = new BaseStat();
-	taylor = new BaseStat();		 
-	#endregion 
-	#region //Specials
-	standardActionSpeed = new BaseStat();
-	moveActionSpeed = new BaseStat();
-	swiftActionSpeed = new BaseStat();
-	inmediateActionSpeed = new BaseStat();
-	moveSpeed = new BaseStat();
-	#endregion
-	#region //Equipment
-		weapons =	new Equip_gears();
-		head =			new Equip_gears();
-		arms =		new Equip_gears();
-		torso =		new Equip_gears();
-		foot =			new Equip_gears();
-		soul =			new Equip_gears();
-		shoulders =new Equip_gears();
-		hands =		new Equip_gears();
-		rings =		new Equip_gears();
-		bag =			new Equip_gears();
+	#region VARIABLE DEFINITIONS
+		#region //Stats
+		str = new Ability();
+		dex = new Ability();
+		con = new Ability();
+		int = new Ability();
+		wis = new Ability();
+		cha = new Ability();
+		#endregion
+		#region //Basics
+		name = "";
+		hitPoints = new HitPoints();
+		armorClass = new ArmorClass();
+		mySize = new basicStat();
+		myReach = new Reach();
+		myAttack = new BaseStat();
+		#endregion		 
+		#region //Saves
+		fortitude = new BaseStat();
+		reflex = new BaseStat();
+		will = new BaseStat();
+		#endregion
+		#region //Skills
+		acrobatics = new BaseStat();
+		alchemy = new BaseStat();
+		armors = new BaseStat();
+		appraise = new BaseStat();
+		bluff = new BaseStat();
+		climb = new BaseStat();
+		diplomacy = new BaseStat();
+		disableDevice = new BaseStat();
+		escape = new BaseStat();
+		heal = new BaseStat();
+		heavyWeapons = new BaseStat();
+		intimidate = new BaseStat();
+		lightWeapons = new BaseStat();
+		perception = new BaseStat();
+		senseMotive = new BaseStat();
+		spellCraft = new BaseStat();
+		stealth = new BaseStat();
+		survival = new BaseStat();
+		taylor = new BaseStat();		 
+		#endregion 
+		#region //Specials
+		standardActionSpeed = new BaseStat();
+		moveActionSpeed = new BaseStat();
+		swiftActionSpeed = new BaseStat();
+		inmediateActionSpeed = new BaseStat();
+		moveSpeed = new BaseStat();
+		#endregion
+		#region //Equipment
+			weapons =	new Equip_gears();
+			head =			new Equip_gears();
+			arms =		new Equip_gears();
+			torso =		new Equip_gears();
+			foot =			new Equip_gears();
+			soul =			new Equip_gears();
+			shoulders =new Equip_gears();
+			hands =		new Equip_gears();
+			rings =		new Equip_gears();
+			bag =			new Equip_gears();
+		#endregion
 	#endregion
 	
-	#region // Stats functions
+	#region Stats functions
 	function stat(item = bonus.untyped, value = 0, type = bonus.untyped){
 		
 		#region  //BASES
@@ -75,7 +76,6 @@ function Player() constructor{
 			if(item == actor_base.temporal_hitpoints)		hitPoints.add(value, type);	
 			if(item == actor_base.armor_class)					armorClass.add(value, type);
 			if(item == actor_base.attack)								myAttack.add(value, type);
-		#endregion
 		#endregion
 		#region  // STATS			 
 			if (item == actor_stat.strength) {
@@ -132,9 +132,9 @@ function Player() constructor{
 			}
 		#endregion
 		#region  // SAVES
-			if (item ==	actor_salvation.fortitude)		fortitude.add(value, type);
-			if (item ==	actor_salvation.reflex)			reflex.add(value, type);
-			if (item ==	actor_salvation.will)				will.add(value, type);
+			if (item ==	save.fortitude)		fortitude.add(value, type);
+			if (item ==	save.reflex)			reflex.add(value, type);
+			if (item ==	save.will)				will.add(value, type);
 		#endregion
 		#region // SKILLS
 			if (item ==	actor_ability.acrobatics)		acrobatics.add(value, type);
@@ -164,6 +164,8 @@ function Player() constructor{
 			if (item ==	spd.inmediate_action)	inmediateActionSpeed.add(value, type);
 			if (item ==	spd.move_action)			moveSpeed.add(value, type);
 		#endregion
+
+	#region RETURN STAT
 		return
 			{				
 			#region //BASES
@@ -198,15 +200,15 @@ function Player() constructor{
 				bluff:					bluff.total(),
 				climb:					climb.total(),
 				diplomacy:			diplomacy.total(),
-				disableDevice:	disableDevice.total(),
+				disable_device:	disableDevice.total(),
 				escape:				escape.total(),
 				heal:					heal.total(),
-				heavyWeapons:	heavyWeapons.total(),
+				heavy_weapons:	heavyWeapons.total(),
 				intimidate:			intimidate.total(),
-				lightWeapons:	lightWeapons.total(),
+				light_weapons:	lightWeapons.total(),
 				perception:			perception.total(),
-				senseMotive:		senseMotive.total(),
-				spellCraft:			spellCraft.total(),
+				sense_motive:	senseMotive.total(),
+				spellcraft:			spellCraft.total(),
 				stealth:				stealth.total(),
 				survival:				survival.total(),
 				taylor:					taylor.total(),
@@ -219,10 +221,11 @@ function Player() constructor{
 				walkSpeed:						moveSpeed.total(),
 			#endregion
 			}
+	#endregion
 	}
 	#endregion
 	
-	#region //Equipment functions
+	#region Equipment functions
 	
 	
 	function essemble_equipment(db_gears){
@@ -269,7 +272,7 @@ function Player() constructor{
 	
 	#endregion
 	
-	#region //accesories
+	#region Accesories
 	
 	function change_vital(stat, value, type){
 		switch(type){

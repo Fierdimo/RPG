@@ -71,7 +71,7 @@
     {"id":{"name":"btn_green","path":"sprites/btn_green/btn_green.yy",},"order":1,},
     {"id":{"name":"if_action_pushed","path":"scripts/if_action_pushed/if_action_pushed.yy",},"order":0,},
     {"id":{"name":"icn_void","path":"sprites/icn_void/icn_void.yy",},"order":6,},
-    {"id":{"name":"CONSTANTS","path":"scripts/CONSTANTS/CONSTANTS.yy",},"order":0,},
+    {"id":{"name":"constants","path":"scripts/constants/constants.yy",},"order":0,},
     {"id":{"name":"START","path":"rooms/START/START.yy",},"order":0,},
   ],
   "Options": [

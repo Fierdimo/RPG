@@ -12,7 +12,7 @@ function equipment_db(_code){
 			{ target: actor_base.hit_points, value:{magnitude: "STATIC_VALUE", increase: "PLAYER_DEFINED"}, type: bonus.marked, },
 			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.constitution}, type: bonus.base, },
 			{ target: actor_base.hit_points, value:{magnitude: 1, increase: actor_stat.constitution}, type: bonus.marked, },	
-			{ target: actor_salvation.will, value:{magnitude: "STATIC_VALUE", increase: 4}, type: bonus.resistance, },
+			{ target: save.will, value:{magnitude: "STATIC_VALUE", increase: 4}, type: bonus.resistance, },
 			{ skillCode: 7}
 		]},
 		
@@ -43,8 +43,9 @@ function equipment_db(_code){
 		code:004,
 		slot: slot.weapons,
 		name: "Garrote",
-		description: "Básicamente, un palo",
+		description: "Básicamente, un palo grande",
 		experience_conditions:{},
+		critical: {range : 1, multiplier: 2},
 		effect: [
 			{ skillCode: 9},
 			{target: actor_base.reach, value: {magnitude: 1, increase: 5}, type: bonus.base},

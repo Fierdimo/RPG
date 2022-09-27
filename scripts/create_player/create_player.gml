@@ -14,9 +14,9 @@ function create_player(db){
 	_player.stat(actor_stat.wisdom, db.sab, bonus.base);
 	_player.stat(actor_stat.charisma, db.car, bonus.base);
 	
-	_player.stat(actor_salvation.fortitude, db.fortitude, bonus.base);
-	_player.stat(actor_salvation.reflex, db.reflex, bonus.base);
-	_player.stat(actor_salvation.will, db.will, bonus.base);
+	_player.stat(save.fortitude, db.fortitude, bonus.base);
+	_player.stat(save.reflex, db.reflex, bonus.base);
+	_player.stat(save.will, db.will, bonus.base);
 
 	_player.stat(actor_ability.acrobatics, db.fortitude, bonus.base);
 	_player.stat(actor_ability.alchemy, db.fortitude, bonus.base);

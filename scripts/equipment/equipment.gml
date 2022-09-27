@@ -5,4 +5,5 @@ function Equipment(_gear, slot) constructor{
 	experience_conditions = _gear.experience_conditions;
 	effect = _gear.effect;
 	slot_in_db= slot;
+	if (variable_struct_exists(_gear, "critical")) critical= _gear.critical;
 }

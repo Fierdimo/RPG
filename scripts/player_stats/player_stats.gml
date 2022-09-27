@@ -24,14 +24,14 @@ enum actor_stat{
 	charisma,
 	tail,
 }
-enum actor_salvation{
+enum save{
 	fortitude = actor_stat.tail,
 	reflex,
 	will,
 	tail,
 }
 enum actor_ability{
-	acrobatics = actor_salvation.tail,
+	acrobatics = save.tail,
 	alchemy,
 	armors,
 	appraise,

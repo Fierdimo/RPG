@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Player Options/Cons-DB.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CONSTANTS",
+  "name": "constants",
   "tags": [],
   "resourceType": "GMScript",
 }
