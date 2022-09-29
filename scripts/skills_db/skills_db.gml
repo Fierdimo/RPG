@@ -16,7 +16,7 @@ function skills(_code){
 				level:1,
 				harmless: false,
 				sucess: take_effect.half,
-				cast_time: movement.standard,
+				cast_time: movement.move,
 				},
 			require_attack: {target: actor_base.armor_class, CD: 15},
 			
@@ -46,10 +46,11 @@ function skills(_code){
 				cast_time: movement.standard,
 			},
 			
-			require_attack: {target: save.will, CD: 15},
+			//require_attack: {target: save.will, CD: 15},
+			require_attack: {target: noone},
 			effect:
 				[
-					{target: actor_base.temporal_hitpoints, value:{magnitude: STATIC_VALUE, increase: 10}, time: {magnitude: STATIC_VALUE, increase: 0, fixed: 60}, type: bonus.temporal},					
+					{target: actor_base.temporal_hitpoints, value:{magnitude: STATIC_VALUE, increase: 10}, time: {magnitude: STATIC_VALUE, increase: 10}, type: bonus.temporal},					
 				],	
 		},
 		{

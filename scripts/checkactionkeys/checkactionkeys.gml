@@ -38,7 +38,7 @@ function CheckActionKeys() constructor{
 				}
 				last_key = action_key;
 				
-				var pending = [];				
+				var pending = new ArrayList();				
 				var command = 0;	
 				var _skill = actions[index].skill;							
 				var myBuffos = _skill.effect
@@ -52,11 +52,10 @@ function CheckActionKeys() constructor{
 				
 				global.shape = SHAPE.none
 				repeat(array_length(myBuffos)){
-					if(variable_struct_exists(myBuffos[command], "time")) 
-						myBuffos[command].time.increase = myBuffos[command].time.fixed;					
-;					
-						
-					array_push(pending, myBuffos[command++]);					
+					//if(variable_struct_exists(myBuffos[command], "time")) 
+					//	myBuffos[command].time.increase = myBuffos[command].time.fixed;		
+					
+					pending.add(myBuffos[command++]);					
 				}
 				return { pushed: true, require_attack: _skill.require_attack, data: _skill.data, pending: pending, escape: 0};
 			}		

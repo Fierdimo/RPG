@@ -263,14 +263,14 @@ function Player() constructor{
 									if(effect.key != "") 
 										actionKeys.add(effect.key, skills(effect.skillCode));
 							}
-							else	 array_push(myBuffs, effect)
+							else	 myBuffs.add(effect)
 					}
 				}
 			}
 		}
 	
-		for(var i = 0; i < array_length(myBuffs); i++)
-			{stat(myBuffs[i].target, extractByStat(myBuffs[i].value,,true), myBuffs[i].type );}
+		for(var i = 0; i < myBuffs.len(); i++)
+			{stat(myBuffs.item(i).target, extractByStat(myBuffs.item(i).value,,true), myBuffs.item(i).type );}
 	
 	
 	}

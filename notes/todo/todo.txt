@@ -1,7 +1,7 @@
  >>>>>>>>>>> sprite_index  <<<<<<<<<<<<
 
-TODO:  SHOW FINISHED BUFFS
-
+			GUI
+			====== > swap betwen equip and bag DOING...
 SIstema de ataque
 
 		---------------->  Gear System
@@ -17,22 +17,21 @@ SIstema de ataque
 	--- 2. sistema de target 
 		---------->implementar equipos y estadisticas de ataque DONE
 		----------> FLAG de seleccion	>>>>			DONE
-		----------> FLAG <cuerpo a cuerpo> y <a distancia> DOING
+
 				---------> rango de armas DONE
 		----------> aliado vs enemigo 
 		
 		
 				
 		---------> implementar pausas por acciones
-				------------no se puede mover mientras ataca[PENDING] o castea[DONE]
+				------------no se puede mover mientras ataca[DONE] o castea[DONE]
 
 	--- 3. verificar CA/Salvacion DONE
 	--- 4. ataques de area DONE
 	----------> Seleccion de areas [Burst, Square, Line, Cone] DONE
 	
 	
-	GUI
-			====== > swap betwen equip and bag DOING...
+
 	
 	=====================================================
 	draw triangle

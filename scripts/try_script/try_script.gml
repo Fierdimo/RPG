@@ -42,8 +42,7 @@ function try_script(){
 				return;
 		}				
 				
-		if (not_pass){					
-			myPendigBuffs = [];
+		if (not_pass){				
 			global.shape = SHAPE.none
 			return;
 		}			

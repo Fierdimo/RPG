@@ -3,7 +3,6 @@ function wait_for_target(){
 	if (status == state.waiting_for_target || status == state.waiting_for_target + state.casting){
 				
 		global.cursor = cr_cross;
-		
 		var closest_enemy = get_targets(pendingAction.data); // from manually selected targets
 		if (array_length(closest_enemy) > 0) global.in_range = get_range(pendingAction.data, closest_enemy[0] )
 		else global.in_range = false;

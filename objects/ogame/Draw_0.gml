@@ -33,7 +33,7 @@ while(indx < array_length(Actors)){
 		
 		
 		
-		if(status) draw_text(x, y, abs((global.timerStandardAction/2)-(MAX_CAST_TIME-my.stat().standardActionSpeed)/4));
+		if(status) draw_text(x, y, abs((global.timerStandardAction)-(MAX_CAST_TIME-my.stat().standardActionSpeed)/2));
 		
 	}
 	indx++;

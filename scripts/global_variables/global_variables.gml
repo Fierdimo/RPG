@@ -2,11 +2,14 @@
 	//Start variables	
 	global.paused_game = false;
 	global.pulse = 0.0;
+	global.buff_timer = get_timer();
 	
 	global.timerStandardAction = 0;
 	global.timerMoveAction = 0;
 	global.timerSwiftAction = 0;
 	global.timerCounterAction = 0;
+	
+	global.actionExecution = noone;
 	
 		
 	//=== DRAWING EFFECTS VARIABLES ===
